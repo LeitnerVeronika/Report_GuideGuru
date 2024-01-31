@@ -58,7 +58,9 @@ The envisioned application gives users a tool with a simple interface, allowing 
 
 Moreover, Guide Guru will offer the practical functionality of exporting personalized guides in PDF format, enabling users to conveniently access their curated recommendations on various devices and platforms.
 
-Upon completion, Guide Guru targets delivering a travel companion, that eases the planning process and allows a high levels of customization and efficiency. By placing the user at the center of the experience, Guide Guru aims to enhance the quality of travel adventures, empowering individuals to craft marvelous journeys that align with their interests and preferences.
+Upon completion, Guide Guru targets delivering a travel companion, that eases the planning process and allows a high levels of customization and efficiency. By placing the user at the center of the experience, Guide Guru aims to enhance the quality of travel adventures, empowering individuals to craft marvelous journeys that align, with their interests and preferences.
+
+To ensure that users interests are depicted in Guide Guru, an questionnaire was designed. XX participants allowed us an insight in their travel behavior and show us their hobbies and interests as well as their thoughts on how a good travel guide should look in their opinion. Through that Guide Guru is tailored to the needs of a broad audience, thus needing only small bits of information from the user.
 
 %%%-----------------------------------------------------------------------------
 \chapter{Project Details}
@@ -67,6 +69,25 @@ Upon completion, Guide Guru targets delivering a travel companion, that eases th
 Describe important project steps, \eg, the rationale of the chosen architecture
 or technology stack, design decisions, algorithms used, interesting challenges
 faced on the way, lessons learned \etc
+
+\bigskip
+
+First foremost, we designed an questionnaire according to our thoughts on which information is most important to implement a simple, yet effective prototype with an highly individual outcome.
+
+This survey included questions about the users preferences, ratings of relevance of different travel aspects and free text questions to grasp a short feeling for which hobbies are relevant for the users and as well as which information they want the travel guide to include.
+
+%document the results of the survey
+
+Meanwhile we researched about a potential technology stack. Two components were defined previously, as we wanted to improve our web-development skills with react we used this framework as our frontend technology. As well we already decided that we want to use ChatGPT from OpenAI as our large language model (LLM) of choice. Thankfully our supervisor provided us with an API key. 
+
+However, after some iterations we decided to run our backend development with python as we found out that python is the well documented way to include a large language model into an web application. To allow this inclusion also the XXXXX Flask was used for handling requests and the CORS policies.
+
+As mentioned above, many of our survey participants thought that images are a main criteria for a good travel guide. Thus the countless numbers of cities and places of interest that the user can generate with the input, we needed to use a way to access online data of multiple places. For that we used a combination of the Google Places API and Google Photos API to allow us to download and render images from the recommendations of users. With that technology we allow the users a simple but yet effective insight into the selected places of the travel guide. 
+
+To validate the users input for the destinations we included the geonames API which is curated by user and lists millions of places. It also allows filtering for highly populated places. With this API we could include places with more than 1000 citizens, so a high variety of travel destinations can be used to generate the guide.
+
+
+
 
 %%%-----------------------------------------------------------------------------
 \chapter{System Documentation}
