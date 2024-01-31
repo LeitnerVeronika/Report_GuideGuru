@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  31 JAN 2024 11:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  31 JAN 2024 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1644,16 +1644,6 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 
 (D:\Apps\Latex\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 41.
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 41.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-8.
-
-(D:\Apps\Latex\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
 {C:/Users/Veronika/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc
@@ -1692,33 +1682,37 @@ Appendix A.
 ] [8
 
 ] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44192 strings out of 475247
- 865876 string characters out of 2784049
- 1728495 words of memory out of 3000000
- 64782 multiletter control sequences out of 15000+600000
- 557372 words of font info for 93 fonts, out of 8000000 for 9000
+ 44074 strings out of 475247
+ 864305 string characters out of 2784049
+ 1725495 words of memory out of 3000000
+ 64708 multiletter control sequences out of 15000+600000
+ 524766 words of font info for 66 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 130i,11n,145p,511b,2461s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 130i,11n,145p,617b,2461s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Apps/Latex/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/Apps/Latex/MiKTeX/
 fonts/enc/dvips/lm/lm-ec.enc}<D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmbx10
 .pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><D:/Apps/Latex/MiK
 TeX/fonts/type1/public/lm/lmr10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm
-/lmr6.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr7.pfb><D:/Apps/Latex/M
-iKTeX/fonts/type1/public/lm/lmr9.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/l
-m/lmri10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss10.pfb><D:/Apps/La
-tex/MiKTeX/fonts/type1/public/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/p
-ublic/lm/lmss17.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss9.pfb><D:/A
-pps/Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><D:/Apps/Latex/MiKTeX/fonts
-/type1/public/lm/lmsy8.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmtt10.p
-fb>
-Output written on main.pdf (8 pages, 313673 bytes).
+/lmri10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss10.pfb><D:/Apps/Lat
+ex/MiKTeX/fonts/type1/public/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/pu
+blic/lm/lmss17.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><D:
+/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on main.pdf (8 pages, 208894 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
