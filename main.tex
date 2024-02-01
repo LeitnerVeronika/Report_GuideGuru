@@ -1,3 +1,4 @@
+% !TeX document-id = {a24bb292-b05f-4465-9a19-f6adbf8b8362}
 %% A simple template for a term report using the Hagenberg setup
 %% based on the standard LaTeX 'report' class
 %%% äöüÄÖÜß  <-- no German umlauts here? Use an UTF-8 compatible editor!
@@ -65,12 +66,12 @@ In order to accurately reflect user preferences in Guide Guru, a questionnaire w
 %%%-----------------------------------------------------------------------------
 \chapter{Project Details}
 %%%-----------------------------------------------------------------------------
+%Describe important project steps, \eg, the rationale of the chosen architecture
+%or technology stack, design decisions, algorithms used, interesting challenges
+%faced on the way, lessons learned \etc
+Throughout our project, we meticulously navigated various crucial steps to guarantee the success and deliver high-quality results for our Guide Guru. From designing comprehensive surveys to selecting optimal technology stacks, our journey was marked by strategic decisions aimed at creating a personalized and effective travel guide experience.
 
-Describe important project steps, \eg, the rationale of the chosen architecture
-or technology stack, design decisions, algorithms used, interesting challenges
-faced on the way, lessons learned \etc
-
-\bigskip
+\section{Questionaire}
 
 Initially, we developed a questionnaire based on our understanding of the essential information required to create a straightforward yet impactful prototype with highly personalized outcomes.
 
@@ -78,8 +79,8 @@ This survey encompassed inquiries into user preferences, evaluations of the rele
 
 Key findings from the survey revealed that the majority of participants preferred selecting their destination rather than receiving recommendations. Primary considerations for their travels included the type of travel (\eg, relaxation vacation), the overall environment (\eg, beach or city), and the preferred season for travel. Discovering new hobbies ranked as the least important aspect. All participants expressed a preference for receiving the travel guide in PDF format, with a strong emphasis on the importance of suitable images. Additionally, 85\% favored selecting their hobbies from a predefined list, with sports and art \& culture emerging as the most frequently mentioned categories. Regarding desired information in the travel guide, participants highlighted sights and hidden gems, culinary recommendations, entertainment options, cultural insights, and information on country-specific risks and hazards.
 
-\bigskip
-\noindent Simultaneously, we conducted research on potential technology stacks. Two components were predetermined: utilizing React\footnote{https://react.dev} for frontend development to enhance our web development skills with this technology, and selecting ChatGPT from OpenAI\footnote{https://openai.com} as our preferred large language model (LLM), thus our supervisor thankfully could provide us with an API key for this model.
+\section{Technology Stack}
+Simultaneously, we conducted research on potential technology stacks. Two components were predetermined: utilizing React\footnote{https://react.dev} for frontend development to enhance our web development skills with this technology, and selecting ChatGPT from OpenAI\footnote{https://openai.com} as our preferred large language model (LLM), thus our supervisor thankfully could provide us with an API key for this model.
 
 Following several iterations, we opted to employ Python\footnote{https://www.python.org} for backend development after discovering its well-documented approach to integrating a LLM into a web application. As well Flask\footnote{https://flask.palletsprojects.com/en/3.0.x/}, a micro web framework, was chosen to handle requests and CORS policies.
 
@@ -87,26 +88,56 @@ Given the importance of images as indicated by survey participants, and consider
 
 To validate user input for potential travel destinations, we integrated the geonames API\footnote{https://www.geonames.org}, which is user-curated and lists millions of places, allowing filtering for highly populated areas. This API facilitated the inclusion of destinations with populations exceeding 1000, ensuring a diverse range of travel destinations could be used to generate the guide.
 
-% Mockup
+\section{Prototype Design}
 
-% First prototype
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{Mockup_Example.png}
+	\caption{Mockup of Applicaton and Guide}
+	\label{fig1}
+\end{figure}
 
-% User Testing
+Equipped with insights gleaned from our survey, we embarked on the development of an initial mockup for Guide Guru. Leveraging Figma\footnote{https://www.figma.com/de}, a collaborative design tool, we crafted a clickable prototype encompassing the entire user journey and a blueprint for our PDF guide. This mockup (see figure  \ref{fig1}) enabled us to pinpoint necessary input parameters, map out pages, identify reusable components, and discover the inherent structure of our web application in a fast and efficient manner.
 
-% Final prototype
 
-% Challenges faced
+\section{Implementation First Prototype}
+ 
 
-% Lessions Learned
+\section{User Testing}
+
+
+\section{Final Prototype}
+
+\section{Challenges}
+
+
+\section{Lessions Learned}
+
 
 
 %%%-----------------------------------------------------------------------------
 \chapter{System Documentation}
 %%%-----------------------------------------------------------------------------
 
-Give a well-structured description of the architecture and the technical design
-of your implementation with sufficient granularity to enable an external person
-to continue working on the project.
+%Give a well-structured description of the architecture and the technical design
+%of your implementation with sufficient granularity to enable an external person
+%to continue working on the project.
+
+\section{Backend}
+
+\subsection{Large Language Model Integration}
+
+\subsection{Integration of Google APIs}
+
+\subsection{Geonames API for Destinations}
+
+\section{Frontend}
+
+\subsection{Pages}
+
+\subsection{Components}
+
+\subsection{React PDF}
 
 %%%-----------------------------------------------------------------------------
 \chapter{Summary}

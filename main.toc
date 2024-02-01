@@ -1,7 +1,23 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Aims and Context}{3}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Project Details}{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3}System Documentation}{6}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Summary}{7}{chapter.4}%
-\contentsline {chapter}{\numberline {A}Supplementary Materials}{8}{appendix.A}%
-\contentsline {chapter}{References}{9}{appendix*.2}%
+\contentsline {section}{\numberline {2.1}Questionaire}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Technology Stack}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Prototype Design}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Implementation First Prototype}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}User Testing}{5}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Final Prototype}{5}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Challenges}{5}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Lessions Learned}{5}{section.2.8}%
+\contentsline {chapter}{\numberline {3}System Documentation}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Backend}{7}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Large Language Model Integration}{7}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Integration of Google APIs}{7}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Geonames API for Destinations}{7}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Frontend}{7}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Pages}{7}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Components}{7}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}React PDF}{7}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}Summary}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {A}Supplementary Materials}{9}{appendix.A}%
+\contentsline {chapter}{References}{10}{appendix*.3}%
