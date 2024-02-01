@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  31 JAN 2024 23:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  1 FEB 2024 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1665,21 +1665,23 @@ Chapter 1.
 
 ]
 Chapter 2.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <5> on input line 82.
 [4
 
-]
+] [5]
 Chapter 3.
-[5
-
-]
-Chapter 4.
 [6
 
 ]
-Appendix A.
+Chapter 4.
 [7
 
-] [8
+]
+Appendix A.
+[8
+
+] [9
 
 ] (main.aux)
 
@@ -1695,24 +1697,26 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44068 strings out of 475247
- 864185 string characters out of 2784049
- 1725416 words of memory out of 3000000
- 64702 multiletter control sequences out of 15000+600000
- 524766 words of font info for 66 fonts, out of 8000000 for 9000
+ 44119 strings out of 475247
+ 864775 string characters out of 2784049
+ 1726415 words of memory out of 3000000
+ 64722 multiletter control sequences out of 15000+600000
+ 541981 words of font info for 80 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 130i,11n,145p,617b,2461s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 130i,11n,145p,1119b,2461s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Apps/Latex/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/Apps/Latex/MiKTeX/
 fonts/enc/dvips/lm/lm-ec.enc}<D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmbx10
 .pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><D:/Apps/Latex/MiK
 TeX/fonts/type1/public/lm/lmr10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm
-/lmri10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss10.pfb><D:/Apps/Lat
-ex/MiKTeX/fonts/type1/public/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/pu
-blic/lm/lmss17.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><D:
-/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (8 pages, 211520 bytes).
+/lmr6.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr8.pfb><D:/Apps/Latex/M
+iKTeX/fonts/type1/public/lm/lmr9.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/l
+m/lmri10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss10.pfb><D:/Apps/La
+tex/MiKTeX/fonts/type1/public/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/p
+ublic/lm/lmss17.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><D
+:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on main.pdf (9 pages, 290496 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

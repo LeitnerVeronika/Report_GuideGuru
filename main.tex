@@ -60,7 +60,7 @@ Moreover, Guide Guru will offer the practical functionality of exporting persona
 
 Upon completion, Guide Guru targets delivering a travel companion, that eases the planning process and allows a high levels of customization and efficiency. By placing the user at the center of the experience, Guide Guru aims to enhance the quality of travel adventures, empowering individuals to craft marvelous journeys that align, with their interests and preferences.
 
-To ensure that users interests are depicted in Guide Guru, an questionnaire was designed. XX participants allowed us an insight in their travel behavior and show us their hobbies and interests as well as their thoughts on how a good travel guide should look in their opinion. Through that Guide Guru is tailored to the needs of a broad audience, thus needing only small bits of information from the user.
+In order to accurately reflect user preferences in Guide Guru, a questionnaire was created. Thirty-three participants provided insights into their travel habits, hobbies, interests, and their perspectives on the ideal format for a travel guide. This data has allowed us to customize Guide Guru to cater to a diverse audience, requiring minimal user input while still meeting their needs effectively.
 
 %%%-----------------------------------------------------------------------------
 \chapter{Project Details}
@@ -72,21 +72,32 @@ faced on the way, lessons learned \etc
 
 \bigskip
 
-First foremost, we designed an questionnaire according to our thoughts on which information is most important to implement a simple, yet effective prototype with an highly individual outcome.
+Initially, we developed a questionnaire based on our understanding of the essential information required to create a straightforward yet impactful prototype with highly personalized outcomes.
 
-This survey included questions about the users preferences, ratings of relevance of different travel aspects and free text questions to grasp a short feeling for which hobbies are relevant for the users and as well as which information they want the travel guide to include.
+This survey encompassed inquiries into user preferences, evaluations of the relevance of various travel aspects, and free text questions to glean insights into relevant hobbies and desired content for the travel guide.
 
-%document the results of the survey
+Key findings from the survey revealed that the majority of participants preferred selecting their destination rather than receiving recommendations. Primary considerations for their travels included the type of travel (\eg, relaxation vacation), the overall environment (\eg, beach or city), and the preferred season for travel. Discovering new hobbies ranked as the least important aspect. All participants expressed a preference for receiving the travel guide in PDF format, with a strong emphasis on the importance of suitable images. Additionally, 85\% favored selecting their hobbies from a predefined list, with sports and art \& culture emerging as the most frequently mentioned categories. Regarding desired information in the travel guide, participants highlighted sights and hidden gems, culinary recommendations, entertainment options, cultural insights, and information on country-specific risks and hazards.
 
-Meanwhile we researched about a potential technology stack. Two components were defined previously, as we wanted to improve our web-development skills with react we used this framework as our frontend technology. As well we already decided that we want to use ChatGPT from OpenAI as our large language model (LLM) of choice. Thankfully our supervisor provided us with an API key. 
+\bigskip
+\noindent Simultaneously, we conducted research on potential technology stacks. Two components were predetermined: utilizing React\footnote{https://react.dev} for frontend development to enhance our web development skills with this technology, and selecting ChatGPT from OpenAI\footnote{https://openai.com} as our preferred large language model (LLM), thus our supervisor thankfully could provide us with an API key for this model.
 
-However, after some iterations we decided to run our backend development with python as we found out that python is the well documented way to include a large language model into an web application. To allow this inclusion also the XXXXX Flask was used for handling requests and the CORS policies.
+Following several iterations, we opted to employ Python\footnote{https://www.python.org} for backend development after discovering its well-documented approach to integrating a LLM into a web application. As well Flask\footnote{https://flask.palletsprojects.com/en/3.0.x/}, a micro web framework, was chosen to handle requests and CORS policies.
 
-As mentioned above, many of our survey participants thought that images are a main criteria for a good travel guide. Thus the countless numbers of cities and places of interest that the user can generate with the input, we needed to use a way to access online data of multiple places. For that we used a combination of the Google Places API and Google Photos API to allow us to download and render images from the recommendations of users. With that technology we allow the users a simple but yet effective insight into the selected places of the travel guide. 
+Given the importance of images as indicated by survey participants, and considering the multitude of cities and places of interest generated by user input, we needed a means to access online data for countless locations. To achieve this, we utilized a combination of the Google Places API\footnote{https://developers.google.com/maps/documentation/places/web-service/overview?hl=de} and Google Photos API\footnote{https://developers.google.com/photos?hl=de} to download and display images from user recommendations, providing users with a simple yet effective insight into selected destinations.
 
-To validate the users input for the destinations we included the geonames API which is curated by user and lists millions of places. It also allows filtering for highly populated places. With this API we could include places with more than 1000 citizens, so a high variety of travel destinations can be used to generate the guide.
+To validate user input for potential travel destinations, we integrated the geonames API\footnote{https://www.geonames.org}, which is user-curated and lists millions of places, allowing filtering for highly populated areas. This API facilitated the inclusion of destinations with populations exceeding 1000, ensuring a diverse range of travel destinations could be used to generate the guide.
 
+% Mockup
 
+% First prototype
+
+% User Testing
+
+% Final prototype
+
+% Challenges faced
+
+% Lessions Learned
 
 
 %%%-----------------------------------------------------------------------------
