@@ -410,8 +410,105 @@ This page is only needed to include the PDF Viewer and the React PDF that is des
 
 \subsubsection{Paragraph}
 
-\subsection{React PDF} \label{ReactPDF}
+\subsection{React-PDF} \label{ReactPDF}
 
+React-PDF renderer is a library utilized for generating PDF files with a markup structure similar to HTML and CSS. This enables easy integration into any application. To enable the browser to open the generated PDF, a \texttt{<PDFViewer>} element is required, within which a \texttt{<Document>} is created. Then, as many \texttt{<Pages>} as necessary can be added to the document. To structure the layout of the PDF, the \texttt{<View>} element can be utilized. For including text and images, the appropriate \texttt{<Text>} and \texttt{<Image src="path/to/image">} elements can be used. With these components, we were able to create the simple yet effective layout of our travel guide, as depicted in \ref{fig2}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{Guide_NY_Top5.png}
+	\caption{Front page of the travel guide}
+	\label{fig2}
+	
+	\begin{HtmlCode}
+<PDFViewer style={styles.viewer}>
+	<Document>
+		<Page size="A4" style={styles.page}>
+			<div style={styles.pageAccent}></div>
+				<View style={styles.section}>
+					<Text style={styles.title}>Top 5</Text>
+					<Text style={styles.handwritten}>Places to go</Text>
+					<Image src="../src/img/pdf/imgs/image_3.jpg" 
+						style={styles.largeImg}></Image>
+					<Image src="../src/img/pdf/icons/Icon1.png" style={[styles.numIcon, 
+						{ position: 'absolute', top: 150, left:50}]}></Image>
+					<View style={styles.section}>
+					<Text style={styles.headingLg}>{placesToGo.first.name}</Text>
+					<Text style={styles.description}>{placesToGo.first.description}</Text>
+				</View>
+			</View>
+		</Page>
+ </Document>
+</PDFViewer>
+	\end{HtmlCode}
+\end{figure}
+For styling the PDF, it is possible to utilize the \texttt{style} attribute on every component of the React-PDF library. To enhance code readability and separation of concerns, we decided to store our styling in a separate variable. In the code snipped below the definition of the style elements used in the code in \ref{fig3} can be seen:
+\begin{figure}
+\begin{CssCode}
+const styles = StyleSheet.create({
+	viewer: {
+		width: window.innerWidth, 
+		height: window.innerHeight,
+	},
+	page: {
+		backgroundColor: 'rgba(255,255,255,0.6)',
+		color: "white",
+		fontFamily: 'Jost',
+	},
+	pageAccent: {
+		width: 500,
+		height: 20,
+		position: "absolute",
+		right: 0,
+		backgroundColor: '#1B7EA6'
+	},
+	title: {
+		color: '#1B7EA6',
+		fontSize: 45,
+		textAlign: 'center',
+		fontFamily: 'Jost',
+		fontWeight: "bold"
+	},
+	section: {
+		margin: 10,
+		padding: 10,
+		color: 'black',
+	},
+	headingLg: {
+		width: ImageDimensions.large.width,
+		fontSize: 20,
+		color: '#1B7EA6',
+	},
+	handwritten: {
+		fontFamily: 'Handwritten',
+		textAlign: "center",
+		color: '#232323',
+		fontSize: 28,
+		position: "absolute",
+		top: 63,
+		left: 250,
+	},
+	largeImg:{
+		top: 22,
+		height: ImageDimensions.large.height,
+		marginBottom: 10,
+		objectFit: "cover",
+	},
+	numIcon:{
+		height: ImageDimensions.icon.height,
+		width: ImageDimensions.icon.width,
+		alignSelf:"center",
+		marginBottom: 30,
+	},
+	description:{
+		fontSize: 13,
+		fontWeight: "light",
+	}
+});
+\end{CssCode}
+\caption{Styling of page depicted at\ref{fig2}}
+\label{fig3}
+\end{figure}
 %%%-----------------------------------------------------------------------------
 \chapter{Summary}
 %%%-----------------------------------------------------------------------------

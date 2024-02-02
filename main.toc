@@ -33,7 +33,7 @@
 \contentsline {subsubsection}{HobbySelection}{15}{subsection.3.2.3}%
 \contentsline {subsubsection}{InteractiveMap}{15}{subsection.3.2.3}%
 \contentsline {subsubsection}{Paragraph}{15}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}React PDF}{15}{subsection.3.2.4}%
-\contentsline {chapter}{\numberline {4}Summary}{16}{chapter.4}%
-\contentsline {chapter}{\numberline {A}Supplementary Materials}{17}{appendix.A}%
-\contentsline {chapter}{References}{18}{appendix*.6}%
+\contentsline {subsection}{\numberline {3.2.4}React-PDF}{15}{subsection.3.2.4}%
+\contentsline {chapter}{\numberline {4}Summary}{18}{chapter.4}%
+\contentsline {chapter}{\numberline {A}Supplementary Materials}{19}{appendix.A}%
+\contentsline {chapter}{References}{20}{appendix*.8}%
