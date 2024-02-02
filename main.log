@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  1 FEB 2024 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  2 FEB 2024 11:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1650,9 +1650,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package tocbasic Info: Using my definition of `\numberline' on input line 2.
 Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
-Package tocbasic Info: Using my definition of `\numberline' on input line 20.
-Package tocbasic Info: Using my definition of `\numberline' on input line 21.
-Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
+Package tocbasic Info: Using my definition of `\numberline' on input line 27.
+Package tocbasic Info: Using my definition of `\numberline' on input line 28.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1670,28 +1670,42 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 [4
 
 ]
-<images//Mockup_Example.png, id=91, 1078.0275pt x 683.55376pt>
+<images//Mockup_Example.png, id=93, 1078.0275pt x 683.55376pt>
 File: images//Mockup_Example.png Graphic file (type png)
 <use images//Mockup_Example.png>
 Package pdftex.def Info: images//Mockup_Example.png  used on input line 95.
 (pdftex.def)             Requested size: 415.41025pt x 263.40369pt.
  [5] [6 <./images//Mockup_Example.png>]
 Chapter 3.
-[7
+(D:\Apps\Latex\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+29.
 
-]
+(D:\Apps\Latex\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+151.
+
+(D:\Apps\Latex\MiKTeX\tex/latex/lm\ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [7
+
+] [8]
 Chapter 4.
-[8
-
-]
-Appendix A.
 [9
 
 ]
-
-LaTeX Warning: Empty bibliography on input line 161.
-
+Appendix A.
 [10
+
+]
+
+LaTeX Warning: Empty bibliography on input line 208.
+
+[11
 
 ] (main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1699,23 +1713,25 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43958 strings out of 475247
- 861128 string characters out of 2784049
- 1727453 words of memory out of 3000000
- 64542 multiletter control sequences out of 15000+600000
- 540702 words of font info for 80 fonts, out of 8000000 for 9000
+ 45391 strings out of 475247
+ 882313 string characters out of 2784049
+ 1783498 words of memory out of 3000000
+ 65934 multiletter control sequences out of 15000+600000
+ 545908 words of font info for 84 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 130i,11n,145p,1119b,2461s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{D:/Apps/Latex/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<D:/Apps/Latex/MiKTeX/font
-s/type1/public/lm/lmbx10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr10.
-pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr6.pfb><D:/Apps/Latex/MiKTeX/
-fonts/type1/public/lm/lmr8.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr9
-.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss10.pfb><D:/Apps/Latex/MiKT
-eX/fonts/type1/public/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm
-/lmss17.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (10 pages, 1888973 bytes).
+ 130i,12n,145p,1119b,3006s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{D:/Apps/Latex/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{D:/Apps/Latex/MiKTeX/fon
+ts/enc/dvips/lm/lm-ec.enc}<D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+b><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/Apps/Latex/MiKTeX/f
+onts/type1/public/lm/lmr6.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr8.
+pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr9.pfb><D:/Apps/Latex/MiKTeX/
+fonts/type1/public/lm/lmri9.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lms
+s10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss12.pfb><D:/Apps/Latex/M
+iKTeX/fonts/type1/public/lm/lmss17.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public
+/lm/lmssbx10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on main.pdf (11 pages, 1942360 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

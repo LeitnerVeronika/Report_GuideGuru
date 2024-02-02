@@ -36,7 +36,7 @@
 %%%-----------------------------------------------------------------------------
 
 \begin{abstract}\noindent
-In the dynamic landscape of modern travel, Guide Guru emerges as a individual solution, poised to redefine the way users embark on their adventures. Rooted in the fusion of cutting-edge technology and user-centric design philosophy, this project endeavors to craft a travel guide application that avoids limitations of traditional planning methods. 
+In today's ever-changing world of travel, Guide Guru steps forward as a personal solution, ready to revolutionize how users embark on their journeys. Rooted in the fusion of cutting-edge technology and user-centric design philosophy, this project endeavors to craft a travel guide application that avoids limitations of traditional planning methods. 
 
 \bigskip
 \noindent At its core, Guide Guru is driven by the vision of empowering travelers with a personalized experience, one that seamlessly aligns with their interests, preferences and hobbies. Leveraging the capabilities of advanced large language models, the application will function as an intuitive digital companion, which adapts to the desires of each user. By fostering a tight relationship between technology and user input, Guide Guru endeavors to simplify the travel planning process, offering a platform where every journey is curated to reflect the personality of the individual. 
@@ -69,13 +69,13 @@ In order to accurately reflect user preferences in Guide Guru, a questionnaire w
 %Describe important project steps, \eg, the rationale of the chosen architecture
 %or technology stack, design decisions, algorithms used, interesting challenges
 %faced on the way, lessons learned \etc
-Throughout our project, we meticulously navigated various crucial steps to guarantee the success and deliver high-quality results for our Guide Guru. From designing comprehensive surveys to selecting optimal technology stacks, our journey was marked by strategic decisions aimed at creating a personalized and effective travel guide experience.
+Throughout our project, we carefully navigated through crucial steps to ensure success and produce great outcomes for our Guide Guru. From crafting detailed surveys to choosing the best technology tools, our path was defined by strategic choices aimed at crafting a tailored and efficient travel guide experience.
 
 \section{Questionaire}
 
 Initially, we developed a questionnaire based on our understanding of the essential information required to create a straightforward yet impactful prototype with highly personalized outcomes.
 
-This survey encompassed inquiries into user preferences, evaluations of the relevance of various travel aspects, and free text questions to glean insights into relevant hobbies and desired content for the travel guide.
+This survey included questions about user preferences, assessments of the importance of different travel factors, and open-ended questions to uncover insights into hobbies and preferred content for the travel guide.
 
 Key findings from the survey revealed that the majority of participants preferred selecting their destination rather than receiving recommendations. Primary considerations for their travels included the type of travel (\eg, relaxation vacation), the overall environment (\eg, beach or city), and the preferred season for travel. Discovering new hobbies ranked as the least important aspect. All participants expressed a preference for receiving the travel guide in PDF format, with a strong emphasis on the importance of suitable images. Additionally, 85\% favored selecting their hobbies from a predefined list, with sports and art \& culture emerging as the most frequently mentioned categories. Regarding desired information in the travel guide, participants highlighted sights and hidden gems, culinary recommendations, entertainment options, cultural insights, and information on country-specific risks and hazards.
 
@@ -124,16 +124,63 @@ Equipped with insights gleaned from our survey, we embarked on the development o
 %to continue working on the project.
 
 \section{Backend}
+%Example for code documentation
+%CSSCode, HtmlCode or JsCode
+\begin{PythonCode}
+	import numpy as np
+	
+	def incmatrix(genl1,genl2):
+	m = len(genl1)
+	n = len(genl2)
+	M = None #to become the incidence matrix
+	VT = np.zeros((n*m,1), int)  #dummy variable	
+\end{PythonCode}
 
 \subsection{Large Language Model Integration}
 
 \subsection{Integration of Google APIs}
 
-\subsection{Geonames API for Destinations}
+\subsection{Geonames API}
+We utilized the geonames API to validate user input while keeping the range of possible destinations open. The geonames API contains data on approximately 4.8 million populated places, including details such as name, alternative names, country, population, geolocation, and categorization. To refine the user options, we set a threshold of including only places with over 1,000 inhabitants, ensuring that the travel guide's output remains relevant and accurate.
+
+For the integration of this API into our Guide Guru, we used Express.js\footnote{https://expressjs.com/de/} to create the API Interface. After incorporating cors and axios middleware, we developed two interfaces for communicating with the geonames API.
+
+To enhance user experience, we designed a mechanism to display only well-known and populous destinations upon the initial opening of the dropdown field. Upon rendering the destination page, a request is triggered, prompting an axios-request to the geonames API which can be seen in the below code. This request retrieves 25 cities with over 15,000 residents in its response, ensuring that users are presented with familiar and prominent locations.
+
+\begin{JsCode}
+app.get('/api/bigCity', (req, res) => {
+	const apiUrl = 'http://api.geonames.org/searchJSON?cities=cities15000&maxRows=25&username=fhtravelguidews23';
+	axios.get(apiUrl)
+	.then(response => {
+		res.json(response.data)
+	})
+	.catch(error => {
+		console.error('Error fetching data:', error);
+	});
+});
+\end{JsCode}
+
+As soon as the user begins to enter into the input field an request is sended for ten places that match the input an have more than 1,000 citicens to allow a high variety of possible travel destinations. 
+
+Once the user starts typing in the input field, a request is sent to retrieve ten places that match the input criteria and have more than 1,000 inhabitants, thus providing a diverse range of potential travel destinations.
+
+The processing of the API response data is detailed in the description of our Destination Page at \ref{DestinationPage}.
 
 \section{Frontend}
 
 \subsection{Pages}
+
+\subsubsection{Homepage}
+
+\subsubsection{Destination}\label{DestinationPage}
+
+\subsubsection{Seasons}
+
+\subsubsection{Travel Type}
+
+\subsubsection{Result}
+
+%Exportpage
 
 \subsection{Components}
 
