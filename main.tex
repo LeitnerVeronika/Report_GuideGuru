@@ -140,7 +140,7 @@ Equipped with insights gleaned from our survey, we embarked on the development o
 
 \subsection{Integration of Google APIs}
 
-\subsection{Geonames API}
+\subsection{Geonames API} \label{GeonamesAPI}
 We utilized the geonames API to validate user input while keeping the range of possible destinations open. The geonames API contains data on approximately 4.8 million populated places, including details such as name, alternative names, country, population, geolocation, and categorization. To refine the user options, we set a threshold of including only places with over 1,000 inhabitants, ensuring that the travel guide's output remains relevant and accurate.
 
 For the integration of this API into our Guide Guru, we used Express.js\footnote{https://expressjs.com/de/} to create the API Interface. After incorporating cors and axios middleware, we developed two interfaces for communicating with the geonames API.
@@ -168,23 +168,233 @@ The processing of the API response data is detailed in the description of our De
 
 \section{Frontend}
 
+As mentioned previously, we opted for React as our frontend technology. To maintain a component-based architecture, we divided our frontend into pages that leverage multiple components we designed and implemented. Additionally, we established a state management system to store both user input and data provided by the backend. This mixture of technologies enables us to create a straightforward yet efficient user journey.
+
+\subsection{State Management}
+For state management, we utilized the Redux library to store both user input and data retrieved from the backend. The  \texttt{inputSlice.js} file is responsible for storing the input of the user regarding the desired destination, seasons, type of travel, and selected hobbies they want to include in their journey. Additionally, we implemented a function within this slice to reset the user's input for new requests without requiring a page reload.
+
+Within the \texttt{guideSlice.js} file, all information necessary to construct the guide is saved. This includes details such as destination, population, area, longitude, latitude, country information, images with appropriate dimensions, and recommended places.
+
+In the file \texttt{store.ts}, these two reducers are configured and made accessible within the store variable. For instance, \texttt{store.getState().userInput.destination} provides access to the user's selected destination. To add data into the store, you can use functions like  \texttt{dispatch(setDestionation("destination"))}.
+
 \subsection{Pages}
+
+In our mockup design, we implemented separate pages for each stage of the user journey. Each page features the header component, providing a consistent element throughout the experience for user familiarity. To ensure the validity of every guide request, we opted against traditional navigation methods and instead enabled users to navigate solely using buttons located at the bottom of each page.
 
 \subsubsection{Homepage}
 
+The homepage serves as the initial step in the user journey. To facilitate a seamless start to their personalized experience, we included our logo and a brief introduction explaining how to use the application. Additionally, to encourage continued engagement with the website, we incorporated a call to action featuring a button labeled \textit{Start your journey}, directing users to the first input page.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{Homepage.png}
+	\caption{Homepage of Guide Guru}
+\end{figure}
+
 \subsubsection{Destination}\label{DestinationPage}
+
+In the destination page, users are prompted to choose their preferred travel destination from options provided by our geonames API interface. Upon the initial rendering of the page, a request is made for 25 cities with more than 15,000 inhabitants. The responses from this interface populate the options, where the city name serves as the value and part of the label, along with the country name to prevent confusion between places with similar names. Additionally, information such as city population, country, latitude, and longitude is included in the options to be stored in the state when the user selects a destination. We utilized the \texttt{react-select} library to build this selection component, and the required HTML structure is as follows:
+
+\begin{HtmlCode}
+	<form onSubmit={formSubmit}>
+		<div className="my-4 flex justify-center">
+			<Select
+				isSearchable={true}
+				options={cityOptions}
+				onInputChange={loadOptions}
+				required={true}
+				onChange={handleChange}
+				placeholder="start typing or select a city ..."
+			/>
+		</div>
+		<Button text='Continue' type='submit'/>
+	</form>
+\end{HtmlCode}
+
+To send requests to the interface and build the adapted options as described above when the user starts typing into the input field, we utilize the following TypeScript function. This function is called from the \texttt{onInputChange} event of the \texttt{<Select>} component:
+
+%CSSCode, HtmlCode or JsCode
+\begin{JsCode}
+const [cityData, setCityData] = useState([]);
+const [cityOptions, setCityOptions] = useState([]);
+const dispatch = useDispatch();
+	
+const loadOptions = (inputValue: string) => {
+	axios.get('http://127.0.0.1:4000/api/city?city=' + inputValue, {}).then((response) => {
+		setCityData(response.data.geonames);
+	}).catch(error => console.log(error));
+};
+
+useEffect(() => {
+	createOptions();
+}, [cityData]);
+
+function createOptions() {
+	const newOptions = []
+	cityData.forEach((city) => {
+		newOptions.push({
+			...city.name,
+			value: city.name,
+			label: city.name + ' (' + city.countryName + ')',
+			population : city.population,
+			country: city.countryName,
+			lat: city.lat,
+			lng: city.lng,
+		})
+	})
+	setCityOptions(newOptions);
+}
+
+const handleChange = (selectedOption) => {
+	dispatch(setDestination(selectedOption.value));
+	let cityCiticens = selectedOption.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	dispatch(setCitizens(cityCiticens));
+	dispatch(setCountry(selectedOption.country));
+	dispatch(setLatitude(selectedOption.lat));
+	dispatch(setLongitude(selectedOption.lng));
+};
+\end{JsCode}
+
+Within the \texttt{loadOptions} function, a request is made to the interface, and the hook for \texttt{cityData} is adapted accordingly. This change triggers the \texttt{useEffect}, which constructs the new options for the selection, refreshing the \texttt{cityOptions} hook.
+
+Once the user selects a destination, the \texttt{handleChange} function is accessed. This function adds the necessary and formatted information into the stores. Therefore, the required data is already saved, and the \texttt{onSubmit} function simply redirects to the next page.
 
 \subsubsection{Seasons}
 
+On the season page, users are required to select at least one of the four seasons. The selection methodology is described within the \texttt{CardBlock} component at \ref{CardBlockComponent}. To ensure that the user has selected at least one season, the form submission process checks the season store for elements. If the season store is empty, the message indicating the selection requirements switches from the regular color to bold red as can be seen in the HTML and TypeScript code below.
+
+\begin{HtmlCode}
+<form onSubmit={handleSubmit(onSubmit)}>
+	<Heading headingLevel='h3' text="In which season would you like to travel?"/>
+	<Paragraph text="Select one or multiple seasons for your journey." 
+		className={`${textColor} ${isBold ? 'font-bold' : ''}`}/>
+	<CardBlock category="seasons" name="seasons"/>
+</form>
+\end{HtmlCode}
+
+
+\begin{JsCode}
+const navigate = useNavigate();
+const [textColor, setTextColor] = useState('text-black');
+const [isBold, setIsBold] = useState(false);
+
+function formSubmit(data: UserInput) {
+	if (store.getState().userInput.seasons.length === 0) {
+		setTextColor('text-error');
+		setIsBold(true);
+	} else {
+		navigate('/type');
+	}
+}
+
+const onSubmit: SubmitHandler<UserInput> = data => formSubmit(data);	
+\end{JsCode}
+
+
+Once the requirements are met, the user is redirected to the travel type page.
+
 \subsubsection{Travel Type}
+
+The functionality of the travel type page mirrors that of the seasons page. Users must select at least one element in the \texttt{CardBlock} component to ensure a correct output from the large language model. Additionally, this requirement aims to motivate users to enter a category, which will be used to tailor the guide to their individual needs.
+
+\subsubsection{Hobbies}
+The hobby page shares similarities with the previous pages, but includes three different \texttt{CardBlock} components, one of which contains the \texttt{HobbySelection} component described at \ref{HobbySelectionComponent}. 
+
+To ensure tailored and appropriate travel guide outputs, we've increased the minimum selected options to three hobbies, either inside the \texttt{CardBlock} or the \texttt{HobbySelection} component. This adjustment aims to prevent undefined or incorrect outputs for points of interest when selected hobbies are not possible at the chosen destination (\eg, skiing in Hawaii). By requiring at least three hobbies to be selected, we anticipate that the guide will provide some relevant points of interest.
+
+The functionality of this page remains largely the same, but includes a small computation for the \texttt{CardBlock} and the additional selected hobbies in the \texttt{HobbySelection} component, as demonstrated below.
+
+\begin{JsCode}
+	const [textColor, setTextColor] = useState('text-black'); 
+	const [isBold, setIsBold] = useState(false);
+	
+	function formSubmit(data: UserInput) {
+		const totalHobbies = store.getState().userInput.hobbies.length + 
+			store.getState().userInput.addHobbies.length;
+		if (totalHobbies < 3) {
+			setTextColor('text-error');
+			setIsBold(true);
+		} else {
+			navigate('/result');
+		}
+	}	
+\end{JsCode}
 
 \subsubsection{Result}
 
-%Exportpage
+At the result page, users are presented with their personal input. We've provided users with the option to validate their input before generating the guide. This is important because the guide generation process can take one to two minutes of computation time, and users should have the possibility to establish it when they are pleased with their input. On this page, users can navigate to each of the previous input pages and change their selection or start a new travel guide with new parameters.
+
+When the user clicks on the generate button, a request with the stored input data is sent to the backend to be computed by the large language model. The resulting guide is then stored in the \texttt{guideStore} to be accessed in the generated PDF document (see \ref{ReactPDF}), to which the user is subsequently redirected.
+
+In the code below the request to the backend to generate the guide and the handling of the output is shown:
+
+\begin{JsCode}
+	const fetchChatResponse = () => {
+		setIsLoading(true); // shows the loading animation, interactive map and message
+		
+		// load the stored inputs
+		const destination = store.getState().userInput.destination;
+		const seasons = store.getState().userInput.seasons;
+		const travelType = store.getState().userInput.travelType;
+		const hobbies = store.getState().userInput.hobbies;
+		const addHobbies = store.getState().userInput.addHobbies;
+		const country = store.getState().guide.country.name;
+		
+		// request to the LLM
+		axios.post('http://127.0.0.1:5000/', {
+			destination: destination,
+			seasons: seasons,
+			travelType: travelType,
+			hobbies: hobbies,
+			addHobbies: addHobbies,
+			country: country
+		}).then((response) => {
+			// save data into guideStore
+			dispatch(setDescription(response?.data.destination_text));
+			dispatch(setDestination(destination));
+			dispatch(setArea(shortenAnswerForNumbers(response?.data.city_area)));
+			dispatch(setCountryCitizens(shortenAnswerForNumbers(response?.
+				data.country_citicens)));
+			dispatch(setCountryArea(shortenAnswerForNumbers(response?.
+				data.country_area)));
+			dispatch(setCurrency(response?.data.currency));
+			let places = response?.data.places_text;
+			let placesArr = places.split(/: |\n\n/);
+			dispatch(setPlacesToGo(placesArr))
+			places = response?.data.poi_text;
+			placesArr = places.split(/: |\n\n/);
+			dispatch(setPOI(placesArr));
+			setIsLoading(false);
+			navigate('/exportGuide')
+		}).catch(error => console.log(error));
+	};
+\end{JsCode}
+
+During the guide generation process, the user is notified that it may take some time. Additionally, an interactive map component (see \ref{InteractiveMap}) is displayed, showing the selected destination marked with data retrieved from the geonames API (described at \ref{GeonamesAPI}). This allows the user to explore their chosen travel destination while waiting for the guide to be generated.
+
+\subsubsection{Export Guide}
+
+This page is only needed to include the PDF Viewer and the React PDF that is described in the subsection \ref{ReactPDF}. 
 
 \subsection{Components}
 
-\subsection{React PDF}
+\subsubsection{Button}
+
+\subsubsection{CardBlock} \label{CardBlockComponent}
+
+\subsubsection{CardInput}
+
+\subsubsection{Header}
+
+\subsubsection{Heading}
+
+\subsubsection{HobbySelection} \label{HobbySelectionComponent}
+
+\subsubsection{InteractiveMap} \label{InteractiveMap}
+
+\subsubsection{Paragraph}
+
+\subsection{React PDF} \label{ReactPDF}
 
 %%%-----------------------------------------------------------------------------
 \chapter{Summary}
