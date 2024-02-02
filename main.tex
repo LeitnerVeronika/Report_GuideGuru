@@ -105,6 +105,21 @@ Equipped with insights gleaned from our survey, we embarked on the development o
 
 \section{User Testing}
 
+Conducting user testing with potential users is a crucial step in ensuring the quality of a prototype and identifying any potential bugs or errors that developers may overlook. By involving 5 potential users in testing our first iteration of the prototype, we aimed to gain qualitative insights into possible user journeys and identify any usability issues or challenges they encountered.
+
+\subsection{Findings}
+
+At the start of the test, each user received a brief introduction about what the test would cover. They were asked to imagine themselves planning a specific journey and to enunciate their thoughts on the interaction. After this initial introduction, users were not given any further instructions on how to use the prototype.
+
+Some key findings from our user tests were that users expressed a desire to search not just for cities, but also for countries in order to select a city located within a specific country. Additionally, users noted that listing the country alongside city options could prevent errors in selection, especially when cities share the same name. The text displayed on input cards was considered insufficiently legible. On the result page, which included a sample guide, it led to confusion among users when the guide featured a different city from the one they had selected.
+
+One user encountered a bug that disabled the large language model. This occurred when the user attempted to use the \texttt{select all} option within the selection of additional hobbies, resulting in the prompt exceeding its maximum length and causing the backend to shut down. Another user selected a hobby that was unavailable in the destination city, prompting the language model to generate an apology stating it couldn't find relevant data, which was then displayed in the guide.
+
+
+\subsection{Further Enhancements}
+Two of the five test user would like to include an duration of the vacation an thus an suitable amount of places of interest for that duration. Three users thought of ideas to avoid the generation time with facts or images about the destination or an pageful output of the guide. Only one thought that the travel guide contained incorrect information for the places of interest. The user thought that probably two niche hobbies would not be part of an tournament in the same park.
+
+Two out of the five test users expressed interest in including the duration of the vacation to determine a suitable number of places of interest for that period. Three users brainstormed ideas to mitigate generation time, such as incorporating facts or images about the destination or showing the result of each fully generated page as soon as it was available. Only one user thought that the travel guide provided incorrect information regarding the places of interest. The guide stated that two niche hobbies have independent tournaments in the same park. Further research didn't provide any information about the tournaments in this park so the description of the place was presumably wrong.
 
 \section{Final Prototype}
 
@@ -506,7 +521,7 @@ const styles = StyleSheet.create({
 	}
 });
 \end{CssCode}
-\caption{Styling of page depicted at\ref{fig2}}
+\caption{Styling of page depicted at \ref{fig2}}
 \label{fig3}
 \end{figure}
 %%%-----------------------------------------------------------------------------
