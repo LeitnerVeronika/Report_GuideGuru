@@ -21,19 +21,19 @@
 \contentsline {subsubsection}{Destination}{9}{figure.caption.3}%
 \contentsline {subsubsection}{Seasons}{11}{lstnumber.-4.38}%
 \contentsline {subsubsection}{Travel Type}{11}{lstnumber.-6.14}%
-\contentsline {subsubsection}{Hobbies}{12}{lstnumber.-6.14}%
-\contentsline {subsubsection}{Result}{12}{lstnumber.-7.13}%
-\contentsline {subsubsection}{Export Guide}{13}{lstnumber.-8.39}%
-\contentsline {subsection}{\numberline {3.2.3}Components}{14}{subsection.3.2.3}%
-\contentsline {subsubsection}{Button}{14}{subsection.3.2.3}%
-\contentsline {subsubsection}{CardBlock}{14}{subsection.3.2.3}%
-\contentsline {subsubsection}{CardInput}{14}{subsection.3.2.3}%
-\contentsline {subsubsection}{Header}{14}{subsection.3.2.3}%
-\contentsline {subsubsection}{Heading}{14}{subsection.3.2.3}%
-\contentsline {subsubsection}{HobbySelection}{14}{subsection.3.2.3}%
-\contentsline {subsubsection}{InteractiveMap}{14}{subsection.3.2.3}%
-\contentsline {subsubsection}{Paragraph}{14}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}React PDF}{14}{subsection.3.2.4}%
-\contentsline {chapter}{\numberline {4}Summary}{15}{chapter.4}%
-\contentsline {chapter}{\numberline {A}Supplementary Materials}{16}{appendix.A}%
-\contentsline {chapter}{References}{17}{appendix*.4}%
+\contentsline {subsubsection}{Hobbies}{12}{figure.caption.4}%
+\contentsline {subsubsection}{Result}{13}{lstnumber.-7.13}%
+\contentsline {subsubsection}{Export Guide}{15}{figure.caption.5}%
+\contentsline {subsection}{\numberline {3.2.3}Components}{15}{subsection.3.2.3}%
+\contentsline {subsubsection}{Button}{15}{subsection.3.2.3}%
+\contentsline {subsubsection}{CardBlock}{15}{subsection.3.2.3}%
+\contentsline {subsubsection}{CardInput}{15}{subsection.3.2.3}%
+\contentsline {subsubsection}{Header}{15}{subsection.3.2.3}%
+\contentsline {subsubsection}{Heading}{15}{subsection.3.2.3}%
+\contentsline {subsubsection}{HobbySelection}{15}{subsection.3.2.3}%
+\contentsline {subsubsection}{InteractiveMap}{15}{subsection.3.2.3}%
+\contentsline {subsubsection}{Paragraph}{15}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}React PDF}{15}{subsection.3.2.4}%
+\contentsline {chapter}{\numberline {4}Summary}{16}{chapter.4}%
+\contentsline {chapter}{\numberline {A}Supplementary Materials}{17}{appendix.A}%
+\contentsline {chapter}{References}{18}{appendix*.6}%

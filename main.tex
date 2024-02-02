@@ -297,6 +297,13 @@ Once the requirements are met, the user is redirected to the travel type page.
 
 The functionality of the travel type page mirrors that of the seasons page. Users must select at least one element in the \texttt{CardBlock} component to ensure a correct output from the large language model. Additionally, this requirement aims to motivate users to enter a category, which will be used to tailor the guide to their individual needs.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{TravelType.png}
+	\caption{Selection of the type of travel}
+\end{figure}
+
+
 \subsubsection{Hobbies}
 The hobby page shares similarities with the previous pages, but includes three different \texttt{CardBlock} components, one of which contains the \texttt{HobbySelection} component described at \ref{HobbySelectionComponent}. 
 
@@ -321,6 +328,7 @@ The functionality of this page remains largely the same, but includes a small co
 \end{JsCode}
 
 \subsubsection{Result}
+
 
 At the result page, users are presented with their personal input. We've provided users with the option to validate their input before generating the guide. This is important because the guide generation process can take one to two minutes of computation time, and users should have the possibility to establish it when they are pleased with their input. On this page, users can navigate to each of the previous input pages and change their selection or start a new travel guide with new parameters.
 
@@ -371,6 +379,14 @@ In the code below the request to the backend to generate the guide and the handl
 \end{JsCode}
 
 During the guide generation process, the user is notified that it may take some time. Additionally, an interactive map component (see \ref{InteractiveMap}) is displayed, showing the selected destination marked with data retrieved from the geonames API (described at \ref{GeonamesAPI}). This allows the user to explore their chosen travel destination while waiting for the guide to be generated.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{ResultPage.png}
+	\caption{Result page before generation}
+	\includegraphics[width=0.4\textwidth]{ResultPageLoading.png}
+	\caption{Result page during generation}
+\end{figure}
 
 \subsubsection{Export Guide}
 

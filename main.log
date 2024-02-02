@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  2 FEB 2024 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  2 FEB 2024 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1705,26 +1705,44 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (D:\Apps\Latex\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) [9 <./images//Homepage.png>] [10] [11]
-Overfull \hbox (10.05742pt too wide) in paragraph at lines 303--304
+) [9 <./images//Homepage.png>] [10]
+<images//TravelType.png, id=214, 804.75656pt x 676.77844pt>
+File: images//TravelType.png Graphic file (type png)
+<use images//TravelType.png>
+Package pdftex.def Info: images//TravelType.png  used on input line 302.
+(pdftex.def)             Requested size: 415.41025pt x 349.34512pt.
+ [11]
+Overfull \hbox (10.05742pt too wide) in paragraph at lines 310--311
 \T1/lmr/m/n/10.95 mum se-lected op-tions to three hob-bies, ei-ther in-side the
  \T1/lmtt/m/n/10.95 CardBlock \T1/lmr/m/n/10.95 or the \T1/lmtt/m/n/10.95 Hobby
 Selection
  []
 
-[12] [13] [14]
-Chapter 4.
-[15
+[12 <./images//TravelType.png>] [13]
+<images//ResultPage.png, id=301, 705.38531pt x 502.87875pt>
+File: images//ResultPage.png Graphic file (type png)
+<use images//ResultPage.png>
+Package pdftex.def Info: images//ResultPage.png  used on input line 385.
+(pdftex.def)             Requested size: 166.16156pt x 118.45276pt.
+<images//ResultPageLoading.png, id=302, 490.08093pt x 608.2725pt>
+File: images//ResultPageLoading.png Graphic file (type png)
+<use images//ResultPageLoading.png>
+Package pdftex.def Info: images//ResultPageLoading.png  used on input line 387.
 
-]
-Appendix A.
+(pdftex.def)             Requested size: 166.16156pt x 206.23447pt.
+ [14 <./images//ResultPage.png> <./images//ResultPageLoading.png>] [15]
+Chapter 4.
 [16
 
 ]
-
-LaTeX Warning: Empty bibliography on input line 418.
-
+Appendix A.
 [17
+
+]
+
+LaTeX Warning: Empty bibliography on input line 434.
+
+[18
 
 ] (main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1732,10 +1750,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45878 strings out of 475247
- 889036 string characters out of 2784049
+ 45908 strings out of 475247
+ 889789 string characters out of 2784049
  1935730 words of memory out of 3000000
- 66277 multiletter control sequences out of 15000+600000
+ 66301 multiletter control sequences out of 15000+600000
  550171 words of font info for 85 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  130i,12n,145p,1119b,3006s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1750,9 +1768,9 @@ iKTeX/fonts/type1/public/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public
 /lm/lmss17.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><D:/App
 s/Latex/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><D:/Apps/Latex/MiKTeX/fonts/typ
 e1/public/lm/lmtt9.pfb>
-Output written on main.pdf (17 pages, 2953044 bytes).
+Output written on main.pdf (18 pages, 5222637 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 201 named destinations out of 1000 (max. 500000)
- 239 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 497 PDF objects out of 1000 (max. 8388607)
+ 204 named destinations out of 1000 (max. 500000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
 
