@@ -183,8 +183,33 @@ In this section, we will establish the backend API using Flask. Flask is a promi
 \end{PythonCode}
 The API handles HTTP POST requests which are made to the endpoint '/'. The post method retrievs the sent JSON and extracts relevant information such as destination, seasons, travel type, hobbies, additional hobbies, and country. The extracted data is then passed to the function get\_response() from the utility module which processes these user's preferences and will generate a suitable response with information about the destination and personalized recommendations
 
+\subsection{Using the Large Language Model}
+In the utility.py module, we utilize the openai Python package to streamline our requests. Initially, we load the OpenAI API key stored in the .env file located in the root directory. The get\_response method is designed to retrieve personalized travel recommendations based on the parameters provided by the user. Initially the OpenAI model is initialized with the "gpt-3.5-turbo" model.
+\begin{PythonCode}
+	def get_response(
+	destination: str, hobbies: list, travelType: list, seasons: list, addHobbies: list, country: str):
+	gpt = models.OpenAI("gpt-3.5-turbo", api_key=api_key)
+\end{PythonCode}
+We utilize the guidance library for our prompting process. This programming paradigm provides enhanced control and efficiency compared to traditional prompting and chaining methods. For the prompting we are using the different roles "system", "user" and "assistant". This is crucial because we require a separate prompt for each aspect, which we then save and send back to the frontend. First of all we need to define the system context for the model: 
+\begin{PythonCode}
+	with system():
+	lm = gpt + "You act as an AI that will create a personalized Travel Guide for a User. You are a trained bot with the best personalized travel suggestions based on the users input. You analyze the inputfrom the user and decide based on that. At the end you will provide a Travel Guide with a specific location and suggestions based on the user needs."
+\end{PythonCode}
+After that we created step by step the wanted prompts. In the following example we ask ChatGPT to search for 5 places based on the information the user provided. We also limited the text to 100 words:
+\begin{PythonCode}
+	with user():
+	lm += "Please search for 5 places to go in " + destination + " within a " + travelTypeString + " vacation while the " + seasonString + " seasons, with a description with around 100 words."
+	
+	with assistant():
+	lm += gen("answerPlaces")
+	places_text = lm["answerPlaces"]
+	print(f'places_text: {places_text}')
+\end{PythonCode}
+After the assistant answers our prompt, we store it in the "places\_text" variable, from where we can use it.
 
-\subsection{Large Language Model Integration}
+We also used ChatGPT to get the currency, area and population of the city as well as for the associated country. For that we changed the model to "gpt-4", because we received better results than with the "gpt-3.5-turbo".
+
+After all prompts have been created and we have saved the corresponding answers, we just return them which will then be the response of the API, if the post method is called.
 
 \subsection{Integration of Google APIs}
 
