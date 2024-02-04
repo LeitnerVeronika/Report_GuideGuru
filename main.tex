@@ -151,6 +151,39 @@ Two out of the five test users expressed interest in including the duration of t
 	VT = np.zeros((n*m,1), int)  #dummy variable	
 \end{PythonCode}
 
+\subsection{Backend API with Flask}
+In this section, we will establish the backend API using Flask. Flask is a prominent Python web framework utilized for building RESTful APIs. We chose this framework because of its simplicity and flexibility. Our goal was to create a backend infrastructure that integrates Flask and ChatGPT functionalities. The API enables communication between the user interface and the AI model, ensuring efficient query handling and response generation. The Flask API looks like the following:
+\begin{PythonCode}
+	class ChatHandler(Resource):
+	def __init__(self, **kwargs):
+	self.context = [{"role": "system", "content": system_context}]
+	
+	def get(self):
+	response = jsonify(context=self.context)
+	response.headers.add("Access-Control-Allow-Origin", "*")
+	return response
+	
+	def post(self):
+	rqs = request.json
+	print(f'POST Print RQS: {rqs}\n')
+	destination = rqs.get('destination')
+	seasons = rqs.get('seasons')
+	travelType = rqs.get('travelType')
+	hobbies = rqs.get('hobbies')
+	addHobbies = rqs.get('addHobbies')
+	country = rqs.get('country')
+	
+	print(f'POST: {destination}\n{country}\n')
+	
+	response = jsonify(get_response(destination, hobbies, travelType, seasons, addHobbies, country))
+	return response
+	
+	
+	api.add_resource(ChatHandler, '/')
+\end{PythonCode}
+The API handles HTTP POST requests which are made to the endpoint '/'. The post method retrievs the sent JSON and extracts relevant information such as destination, seasons, travel type, hobbies, additional hobbies, and country. The extracted data is then passed to the function get\_response() from the utility module which processes these user's preferences and will generate a suitable response with information about the destination and personalized recommendations
+
+
 \subsection{Large Language Model Integration}
 
 \subsection{Integration of Google APIs}
