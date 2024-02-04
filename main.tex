@@ -123,6 +123,8 @@ Two out of the five test users expressed interest in including the duration of t
 
 \section{Final Prototype}
 
+In the final prototype, we addressed several bugs and incorporated additional features to unleash the full potential of Guide Guru. For instance, we included countries to the destinations and enhanced the selection process by offering initial options consisting of cities with populations exceeding 15,000 residents. We overhaul the style of card selection, improved responsiveness, and implemented form validation requiring a minimum selection. One of the most significant updates occurred on the result page, where we eliminated the example guide and introduced a table displaying previous user inputs, allowing for easy modifications if necessary. Additionally, we integrated an interactive map to engage users while they await the generation of the final guide.
+ 
 \section{Challenges}
 
 
@@ -139,17 +141,6 @@ Two out of the five test users expressed interest in including the duration of t
 %to continue working on the project.
 
 \section{Backend}
-%Example for code documentation
-%CSSCode, HtmlCode or JsCode
-\begin{PythonCode}
-	import numpy as np
-	
-	def incmatrix(genl1,genl2):
-	m = len(genl1)
-	n = len(genl2)
-	M = None #to become the incidence matrix
-	VT = np.zeros((n*m,1), int)  #dummy variable	
-\end{PythonCode}
 
 \subsection{Backend API with Flask}
 In this section, we will establish the backend API using Flask. Flask is a prominent Python web framework utilized for building RESTful APIs. We chose this framework because of its simplicity and flexibility. Our goal was to create a backend infrastructure that integrates Flask and ChatGPT functionalities. The API enables communication between the user interface and the AI model, ensuring efficient query handling and response generation. The Flask API looks like the following:
