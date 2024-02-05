@@ -102,6 +102,9 @@ Equipped with insights gleaned from our survey, we embarked on the development o
 
 \section{Implementation First Prototype}
  
+Armed with insights gathered from the prototype design step, we embarked on implementing the initial iteration of our Guide Guru prototype as an web application. This involved constructing components for various functionalities, deploying them across multiple pages, integrating diverse APIs, establishing stores to manage user input and guide output, and configuring the large language model to generate meaningful content for our guide. We conducted experiments with different setups and prompts for text generation and carefully tested the outcomes for reliability.
+
+In crafting the user journey, we thoroughly aligned it with the principles outlined in Nielsen's 10 usability heuristics \cite{UsabilityHeuristics}. To improve our prototype even more according to these heuristics, we chose to include user testing as part of our project plan.
 
 \section{User Testing}
 
@@ -127,10 +130,24 @@ In the final prototype, we addressed several bugs and incorporated additional fe
  
 \section{Challenges}
 
+One of the major challenges we encountered in this project was setting up the backend for the large language model. This process involved multiple iterative steps, and debugging issues through error logs was complex due to various dependencies. Additionally, since the setup was local, both team members needed a valid backend setup to continue working on the project.
+
+Once the LLM backend was established, another challenge arose: generating output that met the requirements for the descriptions of places, as well as formatting the numbers for country and city area and citizens correctly. This required fine-tuning prompts for ChatGPT and generating multiple iterations of possible user input to validate functionality. While we couldn't verify functionality for every input, extensive testing, including user testing, gave us confidence that it works for most touristically relevant places with sufficient data available.
+
+One of the challenges we are still grappling with is displaying the generated travel guide in a new tab to ensuring users can navigate back to Guide Guru without losing the guide if it's not downloaded. Our current setup saves the generated output into our redux storage, making it inaccessible in another tab. When opened in a new tab, the information can not be displayed. Attempting to open a new tab with a new request also results in data loss, disrupting the user journey and preventing users from tracking the system's status.
+
+We have not implemented a solution yet, but we have two ideas. One is to use local storage instead of the redux store. Another option is to store user input or the LLM output in a database. However, as our project deadline was approaching when we came up with these ideas, we were not able to implement them.
+
+Most of the other challenges we faced during prototype implementation involved fixing small bugs and dealing with unpredictable outputs.
 
 \section{Lessions Learned}
 Several lessons were learned during the project. Firstly, we came across on how to set up a Python backend which proved to be quite challenging, especially because we both have never done this before. Additionally, integrating the different APIs was crucial for getting data and the functionality of Guide Guru. Designing prompts for ChatGPT was another significant learning aspect, highlighting the importance of creating effective inputs for natural language processing. Towards the project's conclusion, we reflected that using JSON could have provided improved organization for ChatGPT's responses, thus offering greater flexibility in handling data. Furthermore, we gained experience in handling unpredictable data, specifically the responses from ChatGPT, through the utilization of regular expressions (regex). These lessons will defenitely help us for future projects and we are happy we experienced them.
 
+The main lessons we learned during our project were closely tied to the challenges we encountered. We learned how to set up a Python backend and engage in prompt engineering to ensure sufficient ChatGPT output. Working with the somewhat unpredictable output of the LLM proved to be a significant learning. While the LLM provided quick results, generating reliable output tailored to specific needs was challenging, and fine-tuning the model required a considerable amount of time.
+
+Additionally, we gained valuable knowledge about React as a frontend technology. We learned effective methods for separating content and testing the web application thoroughly. 
+
+These experiences broadened our understanding of both backend and frontend development processes, highlighting the importance of careful planning and iteration to achieve desired outcomes.
 
 
 %%%-----------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  4 FEB 2024 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  5 FEB 2024 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1670,91 +1670,84 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 [4
 
 ]
-<images//Mockup_Example.png, id=101, 1078.0275pt x 683.55376pt>
+<images//Mockup_Example.png, id=100, 1078.0275pt x 683.55376pt>
 File: images//Mockup_Example.png Graphic file (type png)
 <use images//Mockup_Example.png>
 Package pdftex.def Info: images//Mockup_Example.png  used on input line 95.
 (pdftex.def)             Requested size: 415.41025pt x 263.40369pt.
  [5]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-16.
+19.
  (D:\Apps\Latex\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [6 <./images//Mockup_Example.png>] [7]
+) [6 <./images//Mockup_Example.png>] [7] [8]
 Chapter 3.
 (D:\Apps\Latex\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-159.
+176.
 
 (D:\Apps\Latex\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [8
+) [9
 
-] [9] [10]
-<images//Homepage.png, id=198, 785.18344pt x 603.0028pt>
+] [10] [11] [12]
+<images//Homepage.png, id=222, 785.18344pt x 603.0028pt>
 File: images//Homepage.png Graphic file (type png)
 <use images//Homepage.png>
-Package pdftex.def Info: images//Homepage.png  used on input line 254.
+Package pdftex.def Info: images//Homepage.png  used on input line 287.
 (pdftex.def)             Requested size: 415.41025pt x 319.0287pt.
-
-(D:\Apps\Latex\MiKTeX\tex/latex/listings\lstlang1.sty
+ [13 <./images//Homepage.png>] (D:\Apps\Latex\MiKTeX\tex/latex/listings\lstlang
+1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (D:\Apps\Latex\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) [11] [12 <./images//Homepage.png>] [13]
-<images//TravelType.png, id=271, 804.75656pt x 676.77844pt>
+) [14]
+<images//TravelType.png, id=283, 804.75656pt x 676.77844pt>
 File: images//TravelType.png Graphic file (type png)
 <use images//TravelType.png>
-Package pdftex.def Info: images//TravelType.png  used on input line 366.
+Package pdftex.def Info: images//TravelType.png  used on input line 399.
 (pdftex.def)             Requested size: 415.41025pt x 349.34512pt.
-
-Overfull \hbox (10.05742pt too wide) in paragraph at lines 374--375
+ [15]
+Overfull \hbox (10.05742pt too wide) in paragraph at lines 407--408
 \T1/lmr/m/n/10.95 mum se-lected op-tions to three hob-bies, ei-ther in-side the
  \T1/lmtt/m/n/10.95 CardBlock \T1/lmr/m/n/10.95 or the \T1/lmtt/m/n/10.95 Hobby
 Selection
  []
 
-[14] [15 <./images//TravelType.png>]
-<images//ResultPage.png, id=319, 705.38531pt x 502.87875pt>
+[16 <./images//TravelType.png>] [17]
+<images//ResultPage.png, id=373, 705.38531pt x 502.87875pt>
 File: images//ResultPage.png Graphic file (type png)
 <use images//ResultPage.png>
-Package pdftex.def Info: images//ResultPage.png  used on input line 449.
+Package pdftex.def Info: images//ResultPage.png  used on input line 482.
 (pdftex.def)             Requested size: 166.16156pt x 118.45276pt.
-<images//ResultPageLoading.png, id=320, 490.08093pt x 608.2725pt>
+<images//ResultPageLoading.png, id=374, 490.08093pt x 608.2725pt>
 File: images//ResultPageLoading.png Graphic file (type png)
 <use images//ResultPageLoading.png>
-Package pdftex.def Info: images//ResultPageLoading.png  used on input line 451.
+Package pdftex.def Info: images//ResultPageLoading.png  used on input line 484.
 
 (pdftex.def)             Requested size: 166.16156pt x 206.23447pt.
- [16]
-Overfull \vbox (9.719pt too high) has occurred while \output is active []
-
- [17 <./images//ResultPage.png> <./images//ResultPageLoading.png>]
-<images//Guide_NY_Top5.png, id=375, 465.23813pt x 653.44125pt>
+ [18 <./images//ResultPage.png> <./images//ResultPageLoading.png>]
+<images//Guide_NY_Top5.png, id=395, 465.23813pt x 653.44125pt>
 File: images//Guide_NY_Top5.png Graphic file (type png)
 <use images//Guide_NY_Top5.png>
-Package pdftex.def Info: images//Guide_NY_Top5.png  used on input line 483.
+Package pdftex.def Info: images//Guide_NY_Top5.png  used on input line 516.
 (pdftex.def)             Requested size: 166.16156pt x 233.37415pt.
 
 
-LaTeX Warning: Float too large for page by 75.19409pt on input line 575.
+LaTeX Warning: Float too large for page by 75.19409pt on input line 608.
 
-[18 <./images//Guide_NY_Top5.png>] [19] [20]
+[19] [20 <./images//Guide_NY_Top5.png>] [21]
 Chapter 4.
-[21
-
-]
-Appendix A.
 [22
 
 ]
-
-LaTeX Warning: Empty bibliography on input line 595.
-
+Appendix A.
 [23
+
+] [24
 
 ] (main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1762,27 +1755,28 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46242 strings out of 475247
- 895251 string characters out of 2784049
- 1962827 words of memory out of 3000000
- 66508 multiletter control sequences out of 15000+600000
- 550171 words of font info for 85 fonts, out of 8000000 for 9000
+ 46491 strings out of 475247
+ 900231 string characters out of 2784049
+ 1961063 words of memory out of 3000000
+ 66740 multiletter control sequences out of 15000+600000
+ 552966 words of font info for 86 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 130i,12n,145p,1119b,2461s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 130i,12n,145p,1119b,3004s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Apps/Latex/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/Apps/Latex/MiKTeX/font
 s/enc/dvips/lm/lm-ts1.enc}<D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmbx10.pf
-b><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/Apps/Latex/MiKTeX/f
-onts/type1/public/lm/lmr6.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr8.
-pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr9.pfb><D:/Apps/Latex/MiKTeX/
-fonts/type1/public/lm/lmri10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lm
-ri9.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss10.pfb><D:/Apps/Latex/M
-iKTeX/fonts/type1/public/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public
-/lm/lmss17.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><D:/App
-s/Latex/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><D:/Apps/Latex/MiKTeX/fonts/typ
-e1/public/lm/lmtt9.pfb>
-Output written on main.pdf (23 pages, 5933150 bytes).
+b><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><D:/Apps/Latex/MiKTeX
+/fonts/type1/public/lm/lmr10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lm
+r6.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmr8.pfb><D:/Apps/Latex/MiKT
+eX/fonts/type1/public/lm/lmr9.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/l
+mri10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmri9.pfb><D:/Apps/Latex/
+MiKTeX/fonts/type1/public/lm/lmss10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/publi
+c/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss17.pfb><D:/Apps
+/Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><D:/Apps/Latex/MiKTeX/fonts/ty
+pe1/public/lm/lmtt10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+
+Output written on main.pdf (24 pages, 5963012 bytes).
 PDF statistics:
- 684 PDF objects out of 1000 (max. 8388607)
- 330 named destinations out of 1000 (max. 500000)
+ 714 PDF objects out of 1000 (max. 8388607)
+ 345 named destinations out of 1000 (max. 500000)
  283 words of extra memory for PDF output out of 10000 (max. 10000000)
 
