@@ -38,5 +38,5 @@
 \contentsline {subsubsection}{Paragraph}{19}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}React-PDF}{19}{subsection.3.2.4}%
 \contentsline {chapter}{\numberline {4}Summary}{22}{chapter.4}%
-\contentsline {chapter}{\numberline {A}Supplementary Materials}{23}{appendix.A}%
-\contentsline {chapter}{References}{24}{appendix*.8}%
+\contentsline {chapter}{\numberline {A}Supplementary Materials}{24}{appendix.A}%
+\contentsline {chapter}{References}{25}{appendix*.8}%

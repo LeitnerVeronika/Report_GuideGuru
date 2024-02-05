@@ -128,7 +128,7 @@ Two out of the five test users expressed interest in including the duration of t
 
 In the final prototype, we addressed several bugs and incorporated additional features to unleash the full potential of Guide Guru. For instance, we included countries to the destinations and enhanced the selection process by offering initial options consisting of cities with populations exceeding 15,000 residents. We overhaul the style of card selection, improved responsiveness, and implemented form validation requiring a minimum selection. One of the most significant updates occurred on the result page, where we eliminated the example guide and introduced a table displaying previous user inputs, allowing for easy modifications if necessary. Additionally, we integrated an interactive map to engage users while they await the generation of the final guide.
  
-\section{Challenges}
+\section{Challenges} \label{Challenges}
 
 One of the major challenges we encountered in this project was setting up the backend for the large language model. This process involved multiple iterative steps, and debugging issues through error logs was complex due to various dependencies. This aspect proved to be particularly challenging since neither of us had any prior knowledge of this integration technology. Additionally, since the setup was local, both team members needed a valid backend setup to continue working on the project.
 
@@ -633,8 +633,26 @@ const styles = StyleSheet.create({
 \chapter{Summary}
 %%%-----------------------------------------------------------------------------
 
-Give a concise (and honest) summary of what has been accomplished and what not. 
-Point out issues that may warrant further investigation.
+We are proud that we accomplished to develop a individual travel guide for users that try to include their hobbies into their journey easily. Thanks to the enthusiastic participation of our survey respondents and user testers, we were able create a intuitive and effective way to allow users to plan their next travel experience. We were able to deliver users a combination of the must-sees attractions and also a way to invoke their personality and hobbies into their journey. 
+
+Certainly, there are a lots of ways to improve our prototype to become a fully functional web platform for individualized travel guides. A one of this issue we already mentioned in the challenge section of the project details \ref{Challenges}. Other improvements we identified for our travel guide platform, based on the evaluation of the survey, user testing, and our own reflections on the project:
+
+We would like to improve the usability of our web application more regarding the interaction design, the responsiveness -- expecially for mobile devices -- and reducing the time it takes to generate the travel guide. This will ensure a smoother user experience without compromising on the personalized nature or quality of the output.
+
+Furthermore, we intend to incorporate additional features into the guide to enhance user reliance on the Guide Guru application. One proposed improvement involves adjusting the number of recommended places based on the travel duration. This way, users can select options that best fit their journey, providing greater variation for longer trips. Currently, our implementation only suggests enough places for short trips, but this adjustment would allow a broader range of travel durations.
+ 
+Another enhancement that could be facilitated by advancements in natural language processing is the addition of multiple languages for both the guide and the application interface. This would enable Guide Guru to serve a diverse audience, offering its services to users who speak different languages.
+
+Some users have expressed interest in a feature for planning road trips with multiple destinations. This feature would involve the application calculating the best routes between cities and providing recommendations for each stop along the way. While we recognize the potential usefulness of such a feature for planning road trips, we have determined that it falls clearly outside the scope of our project. Implementing this feature would require significant development and resources, making it more suitable as a standalone semester project.
+
+Initially, we planned to include a dedicated page for safety information in our guide, covering travel advisories, vaccination recommendations, and other relevant safety advice for each destination. However, as we prioritized generating valid and useful recommendations, we ultimately decided to discard this idea. Despite recognizing the importance of safety information for travelers, we were unable to incorporate this feature by the end of the project due to time constraints.
+
+Another enhancement to improve the validity of our outputs and enhance the usability of our application would be to include links to the places of interest. This would allow users to verify the descriptions provided by the large language model while also accessing additional information more easily.
+
+One of the primary challenges in our Guide Guru project is inherent in our technological setup. We faced difficulties in verifying and validating the recommendations provided in our guide. This issue warrants further investigation, as LLMs operate as black box models, making it challenging to predict their output given the high variance of input parameters possible. Ensuring the reliability of our application for users to plan their entire vacation without additional research would demand intensive fact-checking and prompt engineering efforts.
+
+Despite the challenges and potential areas for improvement identified, we are satisfied with the outcome of our project. We believe that we have successfully achieved the goals we set at the start, and we are grateful for the knowledge and experience gained through our work on this semester project. We would like to extend our sincere thanks to our supervisor for the guidance and support throughout our project.
+
 
 %%%-----------------------------------------------------------------------------
 \appendix                                                   % Switch to appendix
