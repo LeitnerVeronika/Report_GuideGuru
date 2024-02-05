@@ -130,7 +130,7 @@ In the final prototype, we addressed several bugs and incorporated additional fe
  
 \section{Challenges}
 
-One of the major challenges we encountered in this project was setting up the backend for the large language model. This process involved multiple iterative steps, and debugging issues through error logs was complex due to various dependencies. Additionally, since the setup was local, both team members needed a valid backend setup to continue working on the project.
+One of the major challenges we encountered in this project was setting up the backend for the large language model. This process involved multiple iterative steps, and debugging issues through error logs was complex due to various dependencies. This aspect proved to be particularly challenging since neither of us had any prior knowledge of this integration technology. Additionally, since the setup was local, both team members needed a valid backend setup to continue working on the project.
 
 Once the LLM backend was established, another challenge arose: generating output that met the requirements for the descriptions of places, as well as formatting the numbers for country and city area and citizens correctly. This required fine-tuning prompts for ChatGPT and generating multiple iterations of possible user input to validate functionality. While we couldn't verify functionality for every input, extensive testing, including user testing, gave us confidence that it works for most touristically relevant places with sufficient data available.
 
@@ -141,13 +141,16 @@ We have not implemented a solution yet, but we have two ideas. One is to use loc
 Most of the other challenges we faced during prototype implementation involved fixing small bugs and dealing with unpredictable outputs.
 
 \section{Lessions Learned}
-Several lessons were learned during the project. Firstly, we came across on how to set up a Python backend which proved to be quite challenging, especially because we both have never done this before. Additionally, integrating the different APIs was crucial for getting data and the functionality of Guide Guru. Designing prompts for ChatGPT was another significant learning aspect, highlighting the importance of creating effective inputs for natural language processing. Towards the project's conclusion, we reflected that using JSON could have provided improved organization for ChatGPT's responses, thus offering greater flexibility in handling data. Furthermore, we gained experience in handling unpredictable data, specifically the responses from ChatGPT, through the utilization of regular expressions (regex). These lessons will defenitely help us for future projects and we are happy we experienced them.
 
 The main lessons we learned during our project were closely tied to the challenges we encountered. We learned how to set up a Python backend and engage in prompt engineering to ensure sufficient ChatGPT output. Working with the somewhat unpredictable output of the LLM proved to be a significant learning. While the LLM provided quick results, generating reliable output tailored to specific needs was challenging, and fine-tuning the model required a considerable amount of time.
 
-Additionally, we gained valuable knowledge about React as a frontend technology. We learned effective methods for separating content and testing the web application thoroughly. 
+Towards the project's conclusion, we reflected that using JSON could have provided improved organization for ChatGPT's responses, thus offering greater flexibility in handling data. Furthermore, we gained experience in handling unpredictable data, specifically the responses from ChatGPT, through the utilization of regular expressions (RegEx).
 
-These experiences broadened our understanding of both backend and frontend development processes, highlighting the importance of careful planning and iteration to achieve desired outcomes.
+Moreover, integrating various APIs was essential for obtaining data and enabling the functionality of Guide Guru.
+
+We acquired valuable insights into React as a frontend technology. Throughout the process, we discovered effective strategies for organizing content and conducting thorough testing of the web application.
+
+These experiences expanded our comprehension of both backend and frontend development procedures, underscoring the significance of meticulous planning and iterative approaches to attain desired results. The insights gained from this project will undoubtedly prove invaluable for future projects and works, and we are grateful for the learning opportunities it provided.
 
 
 %%%-----------------------------------------------------------------------------
