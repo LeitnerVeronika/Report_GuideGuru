@@ -508,6 +508,25 @@ This page is only needed to include the PDF Viewer and the React PDF that is des
 \subsubsection{HobbySelection} \label{HobbySelectionComponent}
 
 \subsubsection{InteractiveMap} \label{InteractiveMap}
+For the implementation of an interactive map we choose to use the React-Leaflet library\footnote{https://react-leaflet.js.org/}. The component takes the latitude and longitude of the destination the user selected as parameters and then as a result renders this location.
+\begin{PythonCode}
+	const InteractiveMap: React.FC = ({lng, lat}: MapProps) => {
+		return (
+		<MapContainer center={{lng, lat}} zoom={13}>
+		<TileLayer
+		attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+		/>
+		</MapContainer>
+		);
+	};
+\end{PythonCode}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{interactiveMap.png}
+	\caption{Interactive Map of New York}
+	\label{figInteractiveMap}
+\end{figure}
 
 \subsubsection{Paragraph}
 
