@@ -142,7 +142,7 @@ In the final prototype, we addressed several bugs and incorporated additional fe
 
 \section{Backend}
 
-\subsection{Backend API with Flask}
+\subsection{Backend API with Flask}\label{Backend}
 In this section, we will establish the backend API using Flask. Flask is a prominent Python web framework utilized for building RESTful APIs. We chose this framework because of its simplicity and flexibility. Our goal was to create a backend infrastructure that integrates Flask and ChatGPT functionalities. The API enables communication between the user interface and the AI model, ensuring efficient query handling and response generation. The Flask API looks like the following:
 \begin{PythonCode}
 	class ChatHandler(Resource):
@@ -200,9 +200,25 @@ After the assistant answers our prompt, we store it in the "places\_text" variab
 
 We also used ChatGPT to get the currency, area and population of the city as well as for the associated country. For that we changed the model to "gpt-4", because we received better results than with the "gpt-3.5-turbo".
 
-After all prompts have been created and we have saved the corresponding answers, we just return them which will then be the response of the API, if the post method is called.
+After all prompts have been created and we have saved the corresponding answers, we just return them which will then be the response of the API, if the post method is called \ref{Backend}.
 
 \subsection{Integration of Google APIs}
+We choose the Google Maps API to retrieve photos of specific locations based on textual queries. The text\_search function queries places based on user input by using the Google Places API. If a suitable place is found, we can use the "place\_id" to retrieve various details like the "photo\_reference". With this information we are able to assemble the photo URLs and save it in an array.
+\begin{PythonCode}
+	def text_search(query, max_width=4000, max_height=4000):
+	places = gmaps.places(query=query)
+	place_id = places['results'][0]['place_id']
+	place_details = gmaps.place(place_id=place_id)
+	photo_urls = []
+	for photo_info in place_details['result']['photos']:
+	photo_reference = photo_info['photo_reference']
+	photo_url = f'https://maps.googleapis.com/maps/api/place/photo?
+	maxwidth={max_width}&maxheight={max_height}&photoreference={
+		photo_reference}&key={API_KEY}'
+	photo_urls.append(photo_url)
+	return photo_urls
+\end{PythonCode}
+Following that, we established the download\_images function. This function is designed to accept an array of photo URLs and a designated folder location as parameters. Its purpose is to download and save the images from the provided array to the specified location.
 
 \subsection{Geonames API} \label{GeonamesAPI}
 We utilized the geonames API to validate user input while keeping the range of possible destinations open. The geonames API contains data on approximately 4.8 million populated places, including details such as name, alternative names, country, population, geolocation, and categorization. To refine the user options, we set a threshold of including only places with over 1,000 inhabitants, ensuring that the travel guide's output remains relevant and accurate.
