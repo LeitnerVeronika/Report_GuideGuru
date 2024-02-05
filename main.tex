@@ -481,7 +481,7 @@ In the code below the request to the backend to generate the guide and the handl
 
 During the guide generation process, the user is notified that it may take some time. Additionally, an interactive map component (see \ref{InteractiveMap}) is displayed, showing the selected destination marked with data retrieved from the geonames API (described at \ref{GeonamesAPI}). This allows the user to explore their chosen travel destination while waiting for the guide to be generated.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{ResultPage.png}
 	\caption{Result page before generation}
@@ -500,7 +500,7 @@ We heavily relied on components to organize our application's structure efficien
 The Button component serves the purpose of managing links and form submissions. With customizable options for defining links, button text, and types, it provides a flexible approach to UI design and functionality. The component ensures consistency throughout the application interface, whether the button is used for form submissions or to  navigate between pages.
 
 \subsubsection{CardBlock} \label{CardBlockComponent}
-Depending on the category, the CardBlock component dynamically renders different sets of cards. Each set of cards features images relevant to the category, which should look appealing for the user. For instance, when the category is 'seasons' or 'type', the component generates cards corresponding to seasonal or trip type selections, respectively. Similarly, for categories like 'culture', 'sports', or 'entertainment', it presents cards related to cultural activities, sports options, or entertainment choices. All in all the component makes it easy for users to navigate and engage with structured content by organizing it into categorized card layouts. Example for the case "season":
+Depending on the category, the CardBlock component dynamically renders different sets of cards. Each set of cards features images relevant to the category, which should look appealing for the user and will be rendered within the CardInput component\ref{CardInput}. For instance, when the category is 'seasons' or 'type', the component generates cards corresponding to seasonal or trip type selections, respectively. Similarly, for categories like 'culture', 'sports', or 'entertainment', it presents cards related to cultural activities, sports options, or entertainment choices. All in all the component makes it easy for users to navigate and engage with structured content by organizing it into categorized card layouts. Example for the case "season":
 \begin{JsCode}
 export const CardBlock = ({category}: CardBlockProps) => {
 	switch (category) {
@@ -520,10 +520,25 @@ export const CardBlock = ({category}: CardBlockProps) => {
 }
 \end{JsCode}
 
-
 \subsubsection{CardInput}
+The CardInput component is a dynamic element used for displaying categorized content with associated checkboxes. Each card contains text and an image relevant to the specified category, such as seasons, types, or hobbies. Users can select checkboxes to indicate their preferences, with the component updating the state accordingly.
 
 \subsubsection{Header}
+The Header component in our React application serves as an element for displaying the banner image in the header section of our pages. It accepts parameters for the image source and additionally a CSS class name, because the height needs to be adapted in some pages.
+\begin{JsCode}
+	export const Header = ({image, className}: HeaderProps) => {
+		const bgImage = "src/img/" + image;
+		const headerClass = className + " max-h-72 overflow-hidden " +
+		"relative drop-shadow-lg"
+		return (
+		<Fragment>
+		<div className={headerClass}>
+		<img className="z-0 w-full" src={bgImage}/>
+		</div>
+		</Fragment>
+		)
+	}
+\end{JsCode}
 
 \subsubsection{Heading}
 
