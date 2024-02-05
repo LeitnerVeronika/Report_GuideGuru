@@ -494,10 +494,32 @@ During the guide generation process, the user is notified that it may take some 
 This page is only needed to include the PDF Viewer and the React PDF that is described in the subsection \ref{ReactPDF}. 
 
 \subsection{Components}
+We heavily relied on components to organize our application's structure efficiently. These components allow us to encapsulate reusable pieces of code, simplifying the development process. By breaking down our application into smaller pieces, we improved code readability and maintainability.
 
 \subsubsection{Button}
+The Button component serves the purpose of managing links and form submissions. With customizable options for defining links, button text, and types, it provides a flexible approach to UI design and functionality. The component ensures consistency throughout the application interface, whether the button is used for form submissions or to  navigate between pages.
 
 \subsubsection{CardBlock} \label{CardBlockComponent}
+Depending on the category, the CardBlock component dynamically renders different sets of cards. Each set of cards features images relevant to the category, which should look appealing for the user. For instance, when the category is 'seasons' or 'type', the component generates cards corresponding to seasonal or trip type selections, respectively. Similarly, for categories like 'culture', 'sports', or 'entertainment', it presents cards related to cultural activities, sports options, or entertainment choices. All in all the component makes it easy for users to navigate and engage with structured content by organizing it into categorized card layouts. Example for the case "season":
+\begin{JsCode}
+export const CardBlock = ({category}: CardBlockProps) => {
+	switch (category) {
+		case 'seasons':
+		return (
+			<Fragment>
+				<div className="w-full grid grid-rows-2 grid-flow-col gap-2
+				place-content-center my-5">
+				   <CardInput text="Spring" image="spring.webp" type="seasons"/>
+				   <CardInput text="Fall" image="fall.webp" type="seasons"/>
+				   <CardInput text="Summer" image="summer.webp" type="seasons"/>
+				   <CardInput text="Winter" image="winter.webp" type="seasons"/>
+				</div>
+			</Fragment>
+		)
+	}
+}
+\end{JsCode}
+
 
 \subsubsection{CardInput}
 
