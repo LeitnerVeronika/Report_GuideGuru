@@ -529,18 +529,19 @@ The Header component in our React application serves as an element for displayin
 	export const Header = ({image, className}: HeaderProps) => {
 		const bgImage = "src/img/" + image;
 		const headerClass = className + " max-h-72 overflow-hidden " +
-		"relative drop-shadow-lg"
+			"relative drop-shadow-lg"
 		return (
-		<Fragment>
-		<div className={headerClass}>
-		<img className="z-0 w-full" src={bgImage}/>
-		</div>
-		</Fragment>
+			<Fragment>
+				<div className={headerClass}>
+					<img className="z-0 w-full" src={bgImage}/>
+				</div>
+			</Fragment>
 		)
 	}
 \end{JsCode}
 
 \subsubsection{Heading}
+Additionally we created a Heading component, where the heading level (h1, h2 and h3), the text as well as additional css classes can be set dynamically. Doing that, we are able to style the different headings accordingly and assure consistency throughout the interface.
 
 \subsubsection{HobbySelection} \label{HobbySelectionComponent}
 
