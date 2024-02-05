@@ -405,7 +405,7 @@ The functionality of the travel type page mirrors that of the seasons page. User
 \end{figure}
 
 
-\subsubsection{Hobbies}
+\subsubsection{Hobbies}\label{Hobbies}
 The hobby page shares similarities with the previous pages, but includes three different \texttt{CardBlock} components, one of which contains the \texttt{HobbySelection} component described at \ref{HobbySelectionComponent}. 
 
 To ensure tailored and appropriate travel guide outputs, we've increased the minimum selected options to three hobbies, either inside the \texttt{CardBlock} or the \texttt{HobbySelection} component. This adjustment aims to prevent undefined or incorrect outputs for points of interest when selected hobbies are not possible at the chosen destination (\eg, skiing in Hawaii). By requiring at least three hobbies to be selected, we anticipate that the guide will provide some relevant points of interest.
@@ -543,7 +543,11 @@ The Header component in our React application serves as an element for displayin
 \subsubsection{Heading}
 Additionally we created a Heading component, where the heading level (h1, h2 and h3), the text as well as additional css classes can be set dynamically. Doing that, we are able to style the different headings accordingly and assure consistency throughout the interface.
 
-\subsubsection{HobbySelection} \label{HobbySelectionComponent}
+\subsubsection{Paragraph}
+In addition to the heading component, we also created a paragraph component with almost the same purpose. In this case we are able to dynamically generate text with custom css styling.
+
+\subsubsection{HobbySelection} \label{HobbySelectionComponent}d
+The HobbySelection component was implemented to display "Additional hobbies" at the hobby page \ref{Hobbies} in the form of a MultiSelect dropdown field. The component dynamically populates hobby options fetched from a JSON file with many different hobbies in it. By managing state changes, the component is able to refresh our Redux store, updating user preferences in real-time. In summary the component helps the user to find his desired hobby if it is not in one of the card blocks "culture", "sports" or "entertainment" \ref{label}.
 
 \subsubsection{InteractiveMap} \label{InteractiveMap}
 For the implementation of an interactive map we choose to use the React-Leaflet library\footnote{https://react-leaflet.js.org/}. The component takes the latitude and longitude of the destination the user selected as parameters and then as a result renders this location.
@@ -565,8 +569,6 @@ For the implementation of an interactive map we choose to use the React-Leaflet 
 	\caption{Interactive Map of New York}
 	\label{figInteractiveMap}
 \end{figure}
-
-\subsubsection{Paragraph}
 
 \subsection{React-PDF} \label{ReactPDF}
 
