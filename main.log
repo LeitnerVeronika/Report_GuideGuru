@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  5 FEB 2024 17:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.21)  6 FEB 2024 11:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1652,7 +1652,6 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 14.
 Package tocbasic Info: Using my definition of `\numberline' on input line 40.
 Package tocbasic Info: Using my definition of `\numberline' on input line 41.
-Package tocbasic Info: Using my definition of `\numberline' on input line 42.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1670,7 +1669,7 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 [4
 
 ]
-<images//Mockup_Example.png, id=100, 1078.0275pt x 683.55376pt>
+<images//Mockup_Example.png, id=98, 1078.0275pt x 683.55376pt>
 File: images//Mockup_Example.png Graphic file (type png)
 <use images//Mockup_Example.png>
 Package pdftex.def Info: images//Mockup_Example.png  used on input line 95.
@@ -1692,25 +1691,31 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [9
 
-] [10] [11] [12]
-<images//Homepage.png, id=222, 785.18344pt x 603.0028pt>
+]
+Overfull \hbox (3.27295pt too wide) in paragraph at lines 205--206
+\T1/lmr/m/n/10.95 We uti-lize the guid-ance li-brary[[][]4[]] for our prompt-in
+g pro-cess. This pro-gram-ming paradigm
+ []
+
+[10] [11] [12]
+<images//Homepage.png, id=226, 785.18344pt x 603.0028pt>
 File: images//Homepage.png Graphic file (type png)
 <use images//Homepage.png>
 Package pdftex.def Info: images//Homepage.png  used on input line 291.
 (pdftex.def)             Requested size: 415.41025pt x 319.0287pt.
- [13 <./images//Homepage.png>] (D:\Apps\Latex\MiKTeX\tex/latex/listings\lstlang
-1.sty
+ [13 <./images//Homepage.png>]
+(D:\Apps\Latex\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (D:\Apps\Latex\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) [14]
-<images//TravelType.png, id=283, 804.75656pt x 676.77844pt>
+) [14] [15]
+<images//TravelType.png, id=318, 804.75656pt x 676.77844pt>
 File: images//TravelType.png Graphic file (type png)
 <use images//TravelType.png>
 Package pdftex.def Info: images//TravelType.png  used on input line 403.
 (pdftex.def)             Requested size: 415.41025pt x 349.34512pt.
- [15]
+
 Overfull \hbox (10.05742pt too wide) in paragraph at lines 411--412
 \T1/lmr/m/n/10.95 mum se-lected op-tions to three hob-bies, ei-ther in-side the
  \T1/lmtt/m/n/10.95 CardBlock \T1/lmr/m/n/10.95 or the \T1/lmtt/m/n/10.95 Hobby
@@ -1718,36 +1723,38 @@ Selection
  []
 
 [16 <./images//TravelType.png>] [17]
-<images//ResultPage.png, id=373, 705.38531pt x 502.87875pt>
+<images//ResultPage.png, id=370, 705.38531pt x 502.87875pt>
 File: images//ResultPage.png Graphic file (type png)
 <use images//ResultPage.png>
 Package pdftex.def Info: images//ResultPage.png  used on input line 486.
 (pdftex.def)             Requested size: 166.16156pt x 118.45276pt.
-<images//ResultPageLoading.png, id=374, 490.08093pt x 608.2725pt>
+<images//ResultPageLoading.png, id=371, 490.08093pt x 608.2725pt>
 File: images//ResultPageLoading.png Graphic file (type png)
 <use images//ResultPageLoading.png>
 Package pdftex.def Info: images//ResultPageLoading.png  used on input line 488.
 
 (pdftex.def)             Requested size: 166.16156pt x 206.23447pt.
- [18 <./images//ResultPage.png> <./images//ResultPageLoading.png>]
-<images//Guide_NY_Top5.png, id=395, 465.23813pt x 653.44125pt>
+ [18] [19 <./images//ResultPage.png> <./images//ResultPageLoading.png>] [20]
+<images//interactiveMap.png, id=436, 799.788pt x 239.09325pt>
+File: images//interactiveMap.png Graphic file (type png)
+<use images//interactiveMap.png>
+Package pdftex.def Info: images//interactiveMap.png  used on input line 568.
+(pdftex.def)             Requested size: 415.41025pt x 124.18326pt.
+ [21]
+<images//Guide_NY_Top5.png, id=459, 465.23813pt x 653.44125pt>
 File: images//Guide_NY_Top5.png Graphic file (type png)
 <use images//Guide_NY_Top5.png>
-Package pdftex.def Info: images//Guide_NY_Top5.png  used on input line 520.
+Package pdftex.def Info: images//Guide_NY_Top5.png  used on input line 579.
 (pdftex.def)             Requested size: 166.16156pt x 233.37415pt.
 
 
-LaTeX Warning: Float too large for page by 75.19409pt on input line 612.
+LaTeX Warning: Float too large for page by 75.19409pt on input line 671.
 
-[19] [20 <./images//Guide_NY_Top5.png>] [21]
+[22 <./images//interactiveMap.png>] [23 <./images//Guide_NY_Top5.png>] [24]
 Chapter 4.
-[22
+[25
 
-] [23]
-Appendix A.
-[24
-
-] [25
+] [26] [27
 
 ] (main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1755,10 +1762,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46493 strings out of 475247
- 900250 string characters out of 2784049
- 1961100 words of memory out of 3000000
- 66741 multiletter control sequences out of 15000+600000
+ 46595 strings out of 475247
+ 902288 string characters out of 2784049
+ 1961557 words of memory out of 3000000
+ 66795 multiletter control sequences out of 15000+600000
  552966 words of font info for 86 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  130i,12n,145p,1119b,3004s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1774,9 +1781,9 @@ c/lm/lmss12.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmss17.pfb><D:/Apps
 /Latex/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><D:/Apps/Latex/MiKTeX/fonts/ty
 pe1/public/lm/lmtt10.pfb><D:/Apps/Latex/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
 
-Output written on main.pdf (25 pages, 5968048 bytes).
+Output written on main.pdf (27 pages, 6475922 bytes).
 PDF statistics:
- 720 PDF objects out of 1000 (max. 8388607)
- 346 named destinations out of 1000 (max. 500000)
- 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 794 PDF objects out of 1000 (max. 8388607)
+ 393 named destinations out of 1000 (max. 500000)
+ 280 words of extra memory for PDF output out of 10000 (max. 10000000)
 

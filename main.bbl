@@ -19,6 +19,57 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{geonamesWebsite}{online}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{About GeoNames}
+      \field{urlday}{5}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.geonames.org/about.html
+      \endverb
+      \verb{url}
+      \verb https://www.geonames.org/about.html
+      \endverb
+    \endentry
+    \entry{geonamesDocu}{online}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{GeoNames Search Webservice}
+      \field{urlday}{5}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.geonames.org/export/geonames-search.html
+      \endverb
+      \verb{url}
+      \verb https://www.geonames.org/export/geonames-search.html
+      \endverb
+    \endentry
+    \entry{GuidenceAI}{online}{}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{guidence}
+      \field{urlday}{5}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://guidance.readthedocs.io/en/latest/index.html
+      \endverb
+      \verb{url}
+      \verb https://guidance.readthedocs.io/en/latest/index.html
+      \endverb
+    \endentry
     \entry{UsabilityHeuristics}{online}{}
       \name{author}{1}{}{%
         {{hash=753054f71283d85f82cda8e35daf6bac}{%
