@@ -500,7 +500,7 @@ We heavily relied on components to organize our application's structure efficien
 The \texttt{Button} component serves the purpose of managing links and form submissions. With customizable options for defining links, button text, and types, it provides a flexible approach to UI design and functionality. The component ensures consistency throughout the application interface, whether the button is used for form submissions or to navigate between pages.
 
 \subsubsection{CardBlock} \label{CardBlockComponent}
-Depending on the category, the \texttt{CardBlock} component dynamically renders different sets of cards. Each set of cards features images relevant to the category, which should look appealing for the user and will be rendered within the \texttt{CardInput} component\ref{CardInput}. For instance, when the category is \textit{seasons} or \textit{type}, the component generates cards corresponding to seasonal or trip \textit{type} selections, respectively. Similarly, for categories like \textit{culture}, \textit{sports}, or \textit{entertainment}, it presents cards related to cultural activities, sports options, or entertainment choices. All in all the component makes it easy for users to navigate and engage with structured content by organizing it into categorized card layouts. Example for the case \texttt{seasons}:
+Depending on the category, the \texttt{CardBlock} component dynamically renders different sets of cards. Each set of cards features images relevant to the category, which should look appealing for the user and will be rendered within the \texttt{CardInput} component\ref{CardInput}. For instance, when the category is \textit{seasons} or \textit{type}, the component generates cards corresponding to seasonal or trip type selections, respectively. Similarly, for categories like \textit{culture}, \textit{sports}, or \textit{entertainment}, it presents cards related to cultural activities, sports options, or entertainment choices. All in all the component makes it easy for users to navigate and engage with structured content by organizing it into categorized card layouts. Example for the case \texttt{seasons}:
 \begin{JsCode}
 export const CardBlock = ({category}: CardBlockProps) => {
 	switch (category) {
@@ -550,7 +550,7 @@ In addition to the \texttt{Heading} component, we also created a \texttt{Paragra
 The \texttt{HobbySelection} component was implemented to display \textit{additional hobbies} at the hobby page \ref{Hobbies} in the form of a \texttt{MultiSelect} dropdown field. The component dynamically populates hobby options fetched from a JSON file with many different hobbies in it. By managing state changes, the component is able to refresh our Redux store, updating user preferences in real-time. In summary the component helps the user to find his desired hobby if it is not available in one of the \texttt{CardBlock} component for \textit{culture}, \textit{sports} or \textit{entertainment} \ref{CardBlockComponent}.
 
 \subsubsection{InteractiveMap} \label{InteractiveMap}
-For the implementation of an interactive map we choose to use the React-Leaflet library\footnote{https://react-leaflet.js.org/}. The component takes the latitude and longitude of the destination the user selected as parameters and then as a result renders this location.
+For the implementation of an interactive map we choose to use the React-Leaflet\footnote{https://react-leaflet.js.org/} library. The component takes the latitude and longitude of the destination the user selected as parameters and then as a result renders this location.
 \begin{PythonCode}
 	const InteractiveMap: React.FC = ({lng, lat}: MapProps) => {
 		return (
@@ -572,7 +572,7 @@ For the implementation of an interactive map we choose to use the React-Leaflet 
 
 \subsection{React-PDF} \label{ReactPDF}
 
-React-PDF renderer is a library utilized for generating PDF files with a markup structure similar to HTML and CSS. This enables easy integration into any application. To enable the browser to open the generated PDF, a \texttt{<PDFViewer>} element is required, within which a \texttt{<Document>} is created. Then, as many \texttt{<Pages>} as necessary can be added to the document. To structure the layout of the PDF, the \texttt{<View>} element can be utilized. For including text and images, the appropriate \texttt{<Text>} and \texttt{<Image src="path/to/image">} elements can be used. With these components, we were able to create the simple yet effective layout of our travel guide, as depicted in \ref{fig2}.
+React-PDF\footnote{https://react-pdf.org} renderer is a library utilized for generating PDF files with a markup structure similar to HTML and CSS. This enables easy integration into any application. To enable the browser to open the generated PDF, a \texttt{<PDFViewer>} element is required, within which a \texttt{<Document>} is created. Then, as many \texttt{<Pages>} as necessary can be added to the document. To structure the layout of the PDF, the \texttt{<View>} element can be utilized. For including text and images, the appropriate \texttt{<Text>} and \texttt{<Image src="path/to/image">} elements can be used. With these components, we were able to create the simple yet effective layout of our travel guide, as depicted in \ref{fig2}.
 
 \begin{figure}
 	\centering
