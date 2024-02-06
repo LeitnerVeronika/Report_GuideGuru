@@ -227,17 +227,17 @@ After all prompts have been created and we have saved the corresponding answers,
 We choose the Google Maps API to retrieve photos of specific locations based on textual queries. The \texttt{text\_search} function queries places based on user input by using the Google Places API. If a suitable place is found, we can use the \texttt{place\_id} to retrieve various details like the \texttt{photo\_reference}. With this information we are able to assemble the photo URLs and save it in an array.
 \begin{PythonCode}
 	def text_search(query, max_width=4000, max_height=4000):
-	places = gmaps.places(query=query)
-	place_id = places['results'][0]['place_id']
-	place_details = gmaps.place(place_id=place_id)
-	photo_urls = []
-	for photo_info in place_details['result']['photos']:
-	photo_reference = photo_info['photo_reference']
-	photo_url = f'https://maps.googleapis.com/maps/api/place/photo?
-	maxwidth={max_width}&maxheight={max_height}&photoreference={
-		photo_reference}&key={API_KEY}'
-	photo_urls.append(photo_url)
-	return photo_urls
+		places = gmaps.places(query=query)
+		place_id = places['results'][0]['place_id']
+		place_details = gmaps.place(place_id=place_id)
+		photo_urls = []
+		for photo_info in place_details['result']['photos']:
+			photo_reference = photo_info['photo_reference']
+			photo_url = f'https://maps.googleapis.com/maps/api/place/photo?
+				maxwidth={max_width}&maxheight={max_height}&photoreference=
+				{photo_reference}&key={API_KEY}'
+			photo_urls.append(photo_url)
+			return photo_urls
 \end{PythonCode}
 Following that, we established the \texttt{download\_images} function. This function is designed to accept an array of photo URLs and a designated folder location as parameters. Its purpose is to download and save the images from the provided array to the specified location.
 
@@ -398,7 +398,7 @@ Once the requirements are met, the user is redirected to the travel type page.
 
 The functionality of the travel type page mirrors that of the seasons page. Users must select at least one element in the \texttt{CardBlock} component to ensure a correct output from the large language model. Additionally, this requirement aims to motivate users to enter a category, which will be used to tailor the guide to their individual needs.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{TravelType.png}
 	\caption{Selection of the type of travel}
@@ -546,7 +546,7 @@ Additionally we created a \texttt{Heading} component, where the \texttt{heading 
 \subsubsection{Paragraph}
 In addition to the \texttt{Heading} component, we also created a \texttt{Paragraph} component with almost the same purpose. In this case we are able to dynamically generate text with custom CSS styling.
 
-\subsubsection{HobbySelection} \label{HobbySelectionComponent}d
+\subsubsection{HobbySelection} \label{HobbySelectionComponent}
 The \texttt{HobbySelection} component was implemented to display \textit{additional hobbies} at the hobby page \ref{Hobbies} in the form of a \texttt{MultiSelect} dropdown field. The component dynamically populates hobby options fetched from a JSON file with many different hobbies in it. By managing state changes, the component is able to refresh our Redux store, updating user preferences in real-time. In summary the component helps the user to find his desired hobby if it is not available in one of the \texttt{CardBlock} component for \textit{culture}, \textit{sports} or \textit{entertainment} \ref{CardBlockComponent}.
 
 \subsubsection{InteractiveMap} \label{InteractiveMap}
