@@ -166,32 +166,32 @@ These experiences expanded our comprehension of both backend and frontend develo
 \subsection{Backend API with Flask}\label{Backend}
 In this section, we will establish the backend API using Flask. Flask is a prominent Python web framework utilized for building RESTful APIs. We chose this framework because of its simplicity and flexibility. Our goal was to create a backend infrastructure that integrates Flask and ChatGPT functionalities. The API enables communication between the user interface and the AI model, ensuring efficient query handling and response generation. The Flask API looks like the following:
 \begin{PythonCode}
-	class ChatHandler(Resource):
+class ChatHandler(Resource):
 	def __init__(self, **kwargs):
-	self.context = [{"role": "system", "content": system_context}]
-	
+		self.context = [{"role": "system", "content": system_context}]
+
 	def get(self):
-	response = jsonify(context=self.context)
-	response.headers.add("Access-Control-Allow-Origin", "*")
-	return response
-	
+		response = jsonify(context=self.context)
+		response.headers.add("Access-Control-Allow-Origin", "*")
+		return response
+
 	def post(self):
-	rqs = request.json
-	print(f'POST Print RQS: {rqs}\n')
-	destination = rqs.get('destination')
-	seasons = rqs.get('seasons')
-	travelType = rqs.get('travelType')
-	hobbies = rqs.get('hobbies')
-	addHobbies = rqs.get('addHobbies')
-	country = rqs.get('country')
-	
-	print(f'POST: {destination}\n{country}\n')
-	
-	response = jsonify(get_response(destination, hobbies, travelType, seasons, addHobbies, country))
-	return response
-	
-	
-	api.add_resource(ChatHandler, '/')
+		rqs = request.json
+		print(f'POST Print RQS: {rqs}\n')
+		destination = rqs.get('destination')
+		seasons = rqs.get('seasons')
+		travelType = rqs.get('travelType')
+		hobbies = rqs.get('hobbies')
+		addHobbies = rqs.get('addHobbies')
+		country = rqs.get('country')
+
+		print(f'POST: {destination}\n{country}\n')
+		
+		response = jsonify(get_response(destination, hobbies, travelType, seasons,
+			addHobbies, country))
+		return response
+
+api.add_resource(ChatHandler, '/')
 \end{PythonCode}
 The API handles HTTP POST requests which are made to the endpoint \texttt{'/'} . The post method retrievs the sent JSON and extracts relevant information such as destination, seasons, travel type, hobbies, additional hobbies, and country. The extracted data is then passed to the function \texttt{get\_response()} from the utility module which processes these user's preferences and will generate a suitable response with information about the destination and personalized recommendations
 
@@ -552,16 +552,16 @@ The \texttt{HobbySelection} component was implemented to display \textit{additio
 \subsubsection{InteractiveMap} \label{InteractiveMap}
 For the implementation of an interactive map we choose to use the React-Leaflet\footnote{https://react-leaflet.js.org/} library. The component takes the latitude and longitude of the destination the user selected as parameters and then as a result renders this location.
 \begin{PythonCode}
-	const InteractiveMap: React.FC = ({lng, lat}: MapProps) => {
-		return (
+const InteractiveMap: React.FC = ({lng, lat}: MapProps) => {
+	return (
 		<MapContainer center={{lng, lat}} zoom={13}>
-		<TileLayer
-		attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-		/>
+			<TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/
+					copyright">OpenStreetMap</a> contributors'
+					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+			/>
 		</MapContainer>
-		);
-	};
+	);
+};
 \end{PythonCode}
 \begin{figure}[H]
 	\centering
